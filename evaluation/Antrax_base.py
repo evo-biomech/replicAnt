@@ -68,7 +68,7 @@ def import_tracks(path, numFrames, export=False):
     return tracks
 
 
-def display_video(cap, tracks, show=(0, math.inf), scale=1.0, target_size=100):
+def display_video(cap, tracks, show=(0, math.inf), scale=1.0, target_size=100, output_file=None):
     """
     Function displays imported footage with tracking results as overlay
 
@@ -99,6 +99,14 @@ def display_video(cap, tracks, show=(0, math.inf), scale=1.0, target_size=100):
 
     # set font from info display on frame
     font = cv2.FONT_HERSHEY_SIMPLEX
+    
+    if output_file is not None:
+        fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+        cap_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        cap_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+        print(output_file, fourcc, 30.0, (cap_width,cap_height))
+        out = cv2.VideoWriter(output_file, fourcc, 20.0, (cap_width,cap_height))
+
 
     while True:  # run until no more frames are available
         time_prev = time.time()
@@ -135,6 +143,9 @@ def display_video(cap, tracks, show=(0, math.inf), scale=1.0, target_size=100):
         cv2.putText(frame, "frame: " + str(frame_num), (int(new_width / 2) - 100, 35),
                     font, 0.8, (255, 255, 255), 1, cv2.LINE_AA)
         cv2.imshow('original frame', frame)
+        
+        if output_file is not None:
+            out.write(frame)
 
         if frame_num > show[1]:
             break
@@ -154,6 +165,9 @@ def display_video(cap, tracks, show=(0, math.inf), scale=1.0, target_size=100):
 
     # always reset frame from capture at the end to avoid incorrect skips during access
     cap.set(1, 0)
+    
+    if output_file is not None:
+        out.release()
 
     print("\nReached last frame of specified video or ended by user input.\n")
 
