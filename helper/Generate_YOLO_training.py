@@ -329,14 +329,15 @@ def image_patch_to_dataset(input_paths):
 
 def createCustomFiles(obIDs=["Ant"], amountTest=0.1, output_folder=""):
     """
-    Creates custom folder and files for training and testing YOLOv3 with Darknet Framework
+    Creates custom folder and files for training and testing YOLOv3 & YOLOv4 with Darknet Framework
     :param obIDs:List of names of objects
     :param amountTest: amount of testing data to be withheld from training
     :param output_folder: specify output folder if desired
     """
-    paths_folders = [output_folder + "obj", output_folder + "obj", output_folder + "data"] * 3
-    train_file = str(paths_folders[2]) + "/train.txt"
-    test_file = str(paths_folders[2]) + "/test.txt"
+    paths_folders = [output_folder + "data", output_folder + "data/obj", output_folder + "data"] * 3
+    train_file = "data/train.txt"
+    test_file = "data/test.txt"
+    names_file = "data/obj.names"
 
     if len(obIDs) != 1:
         print("Using custom labels:", obIDs)
@@ -356,7 +357,7 @@ def createCustomFiles(obIDs=["Ant"], amountTest=0.1, output_folder=""):
         f.write("classes = " + str(len(obIDs)) + "\n")
         f.write("train = " + train_file + "\n")
         f.write("train = " + test_file + "\n")
-        f.write("names = " + str(paths_folders[2]) + "/obj.names\n")
+        f.write("names = " + names_file + "\n")
         f.write("backup = backup/\n")
 
     files = []
@@ -369,7 +370,7 @@ def createCustomFiles(obIDs=["Ant"], amountTest=0.1, output_folder=""):
             if '.txt' in file:
                 labels.append(os.path.join(r, file))
 
-    for imagePath in sorted(paths.list_images(paths_folders[0])):
+    for imagePath in sorted(paths.list_images(paths_folders[1])):
         files.append(imagePath)
 
     # set a fixed seed, so results can be replicated by enforcing the same splits every time the script is executed
