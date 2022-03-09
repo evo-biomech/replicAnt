@@ -1,1 +1,2 @@
-data/obj/5_Img_synth.JPG
+data/obj/10_Img_synth.JPG
+data/obj/1_Img_synth.JPG
