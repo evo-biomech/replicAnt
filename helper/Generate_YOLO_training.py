@@ -6,8 +6,9 @@ import math
 import time
 import random
 from sklearn.utils import shuffle
+from sklearn.model_selection import KFold
 from imutils import paths
-
+from operator import itemgetter
 
 def import_tracks(path, numFrames, export=False):
     """
@@ -327,7 +328,7 @@ def image_patch_to_dataset(input_paths):
     return classes
 
 
-def createCustomFiles(obIDs=["Ant"], amountTest=0.1, output_folder=""):
+def createCustomFiles(obIDs=["Ant"], amountTest=0.1, random_state=0, k_fold=[5,None], output_folder=""):
     """
     Creates custom folder and files for training and testing YOLOv3 & YOLOv4 with Darknet Framework
     :param obIDs:List of names of objects
@@ -356,7 +357,7 @@ def createCustomFiles(obIDs=["Ant"], amountTest=0.1, output_folder=""):
     with open(paths_folders[2] + "/" + "obj.data", "w") as f:
         f.write("classes = " + str(len(obIDs)) + "\n")
         f.write("train = " + train_file + "\n")
-        f.write("train = " + test_file + "\n")
+        f.write("test = " + test_file + "\n")
         f.write("names = " + names_file + "\n")
         f.write("backup = backup/\n")
 
@@ -375,15 +376,37 @@ def createCustomFiles(obIDs=["Ant"], amountTest=0.1, output_folder=""):
 
     # set a fixed seed, so results can be replicated by enforcing the same splits every time the script is executed
     # the optional parameter 'random_state' can be used to set a fixed seed. (By default "np.random")
-    files, labels = shuffle(files, labels, random_state=0)
+    if k_fold[1] is None:
+        files, labels = shuffle(files, labels, random_state=0)
+        num_train_examples = int(np.floor(len(files) * (1 - amountTest)))
 
-    num_train_examples = int(np.floor(len(files) * (1 - amountTest)))
+        print("Using", num_train_examples, "training images and",
+              int(np.floor(len(files) - (len(files) * (1 - amountTest)))), "test images. (" + str(amountTest * 100),
+              "%)")
 
-    print("Using", num_train_examples, "training images and",
-          int(np.floor(len(files) - (len(files) * (1 - amountTest)))), "test images. (" + str(amountTest * 100), "%)")
+        files_train, labels_train = files[0:num_train_examples], labels[0:num_train_examples]
+        files_test, labels_test = files[num_train_examples:], labels[num_train_examples:]
+    else:
+        if len(files) > k_fold[0]:
+            # use k_fold crossvalidation and return the defined split for Test and Train data
+            kf = KFold(n_splits=k_fold[0])
+            # return the defined split
+            kf_id = 0
+            for train_index, test_index in kf.split(labels):
+                if kf_id == k_fold[1]:
+                    files_train = [files[i] for i in train_index]
+                    labels_train = [labels[i] for i in train_index]
+                    files_test = [files[i] for i in test_index]
+                    labels_test = [labels[i] for i in test_index]
+                    break
+                else:
+                    kf_id += 1
 
-    files_train, labels_train = files[0:num_train_examples], labels[0:num_train_examples]
-    files_test, labels_test = files[num_train_examples:], labels[num_train_examples:]
+            print("Using", len(train_index), "training images and",
+                  len(test_index), "test images. (" , round(100 / k_fold[0]), "%)")
+        else:
+            # if fewer files are passed then required for the defined split, return empty lists
+            files_train, files_test = [],[]
 
     # create train.txt and test.txt files, containing the locations of the respective image files
     with open(paths_folders[2] + "/" + "train.txt", "w") as f:

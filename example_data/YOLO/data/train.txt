@@ -1,9 +1,6 @@
 data/obj/2_Img_synth.JPG
-data/obj/8_Img_synth.JPG
 data/obj/4_Img_synth.JPG
-data/obj/9_Img_synth.JPG
-data/obj/1_Img_synth.JPG
+data/obj/5_Img_synth.JPG
 data/obj/6_Img_synth.JPG
 data/obj/7_Img_synth.JPG
-data/obj/3_Img_synth.JPG
-data/obj/10_Img_synth.JPG
+data/obj/8_Img_synth.JPG
