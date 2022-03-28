@@ -328,17 +328,23 @@ def image_patch_to_dataset(input_paths):
     return classes
 
 
-def createCustomFiles(obIDs=["Ant"], amountTest=0.1, random_state=0, k_fold=[5,None], output_folder=""):
+def createCustomFiles(obIDs=["Ant"], amountTest=0.1, random_state=0, k_fold=[5,None], output_folder="", custom_name=None):
     """
     Creates custom folder and files for training and testing YOLOv3 & YOLOv4 with Darknet Framework
     :param obIDs:List of names of objects
     :param amountTest: amount of testing data to be withheld from training
     :param output_folder: specify output folder if desired
     """
-    paths_folders = [output_folder + "data", output_folder + "data/obj", output_folder + "data"] * 3
-    train_file = "data/train.txt"
-    test_file = "data/test.txt"
-    names_file = "data/obj.names"
+    if custom_name is not None:
+        paths_folders = [output_folder + "data", output_folder + "data/obj", output_folder + "data"] * 3
+        train_file = "data/" + custom_name +"_train.txt"
+        test_file = "data/" + custom_name +"_test.txt"
+        names_file = "data/obj.names"
+    else:
+        paths_folders = [output_folder + "data", output_folder + "data/obj", output_folder + "data"] * 3
+        train_file = "data/train.txt"
+        test_file = "data/test.txt"
+        names_file = "data/obj.names"
 
     if len(obIDs) != 1:
         print("Using custom labels:", obIDs)
@@ -354,12 +360,20 @@ def createCustomFiles(obIDs=["Ant"], amountTest=0.1, random_state=0, k_fold=[5,N
             f.write(str(obIDs[ob]) + "\n")
 
     # create trainer.data fle based on inputs
-    with open(paths_folders[2] + "/" + "obj.data", "w") as f:
-        f.write("classes = " + str(len(obIDs)) + "\n")
-        f.write("train = " + train_file + "\n")
-        f.write("test = " + test_file + "\n")
-        f.write("names = " + names_file + "\n")
-        f.write("backup = backup/\n")
+    if custom_name is not None:
+        with open(paths_folders[2] + "/" + custom_name, "w") as f:
+            f.write("classes = " + str(len(obIDs)) + "\n")
+            f.write("train = " + train_file + "\n")
+            f.write("test = " + test_file + "\n")
+            f.write("names = " + names_file + "\n")
+            f.write("backup = backup/\n")
+    else:
+        with open(paths_folders[2] + "/" + "obj.data", "w") as f:
+            f.write("classes = " + str(len(obIDs)) + "\n")
+            f.write("train = " + train_file + "\n")
+            f.write("test = " + test_file + "\n")
+            f.write("names = " + names_file + "\n")
+            f.write("backup = backup/\n")
 
     files = []
     labels = []
@@ -388,6 +402,7 @@ def createCustomFiles(obIDs=["Ant"], amountTest=0.1, random_state=0, k_fold=[5,N
         files_test, labels_test = files[num_train_examples:], labels[num_train_examples:]
     else:
         if len(files) > k_fold[0]:
+            files, labels = shuffle(files, labels, random_state=0)
             # use k_fold crossvalidation and return the defined split for Test and Train data
             kf = KFold(n_splits=k_fold[0])
             # return the defined split
@@ -409,13 +424,22 @@ def createCustomFiles(obIDs=["Ant"], amountTest=0.1, random_state=0, k_fold=[5,N
             files_train, files_test = [],[]
 
     # create train.txt and test.txt files, containing the locations of the respective image files
-    with open(paths_folders[2] + "/" + "train.txt", "w") as f:
-        for file in range(len(files_train)):
-            f.write("data/obj/" + files_train[file].split("\\")[-1] + "\n")
+    if custom_name is not None:
+        with open(paths_folders[2] + "/" + custom_name +"_train.txt", "w") as f:
+            for file in range(len(files_train)):
+                f.write("data/obj/" + files_train[file].split("\\")[-1] + "\n")
 
-    with open(paths_folders[2] + "/" + "test.txt", "w") as f:
-        for file in range(len(files_test)):
-            f.write("data/obj/" + files_test[file].split("\\")[-1] + "\n")
+        with open(paths_folders[2] + "/" + custom_name +"_test.txt", "w") as f:
+            for file in range(len(files_test)):
+                f.write("data/obj/" + files_test[file].split("\\")[-1] + "\n")
+    else:
+        with open(paths_folders[2] + "/" + "train.txt", "w") as f:
+            for file in range(len(files_train)):
+                f.write("data/obj/" + files_train[file].split("\\")[-1] + "\n")
+
+        with open(paths_folders[2] + "/" + "test.txt", "w") as f:
+            for file in range(len(files_test)):
+                f.write("data/obj/" + files_test[file].split("\\")[-1] + "\n")
 
     print("Successfully created all required files!")
 
