@@ -2,8 +2,8 @@
 *.pyc
 
 # jupyter related
-.ipynb_checkpoints
-evaluation/.ipynb_checkpoints
-evaluation/__pycache__
-helper/.ipynb_checkpoints
-helper/__pycache__
+.ipynb_checkpoints/
+evaluation/.ipynb_checkpoints/
+evaluation/__pycache__/
+helper/.ipynb_checkpoints/
+helper/__pycache__/
