@@ -11,6 +11,9 @@ For now, just the parsers are hosted here, but we'll soon include the entire gen
     * update enforcing centred bounding boxes with optionally tying bounding boxes to just one keypoint (also reuqires full keypoint list
   * DLC
     * read in new json format files
+    * remove old csv reader
+    * allow to pass list of excluded bodyparts (rather then selecting specific ones)
+    * implement updated simultaneous img/seg/data reading, instead of loading elements at separate stages
   * HERO DLC
     * read in new json format files
   * COCO
