@@ -152,7 +152,7 @@ def display_video(cap, tracks, show=(0, math.inf), scale=1.0):
     print("\nReached last frame of specified video or ended by user input.\n")
 
 
-def video_to_dataset(video, tracks, ROI, use_frames=(0, math.inf), video_name="file_", target_size=100,
+def video_to_dataset(video, tracks, ROI, use_frames=(0, math.inf), output_path="", dataset_img_name="Img", target_size=100,
                      known_weights=None):
     """
     Exports individual frames and corresponding labels from imported tracks
@@ -160,7 +160,6 @@ def video_to_dataset(video, tracks, ROI, use_frames=(0, math.inf), video_name="f
     :param tracks: format specified by import_tracks function
     :param ROI: region of interest in imported video file
     :param use_frames: range of frames to be exported
-    :param video_name: name of input video required to name images and labels
     :param target_size: target size in px
     """
 
@@ -169,12 +168,12 @@ def video_to_dataset(video, tracks, ROI, use_frames=(0, math.inf), video_name="f
     video.set(1, use_frames[0])
 
     # create new folders for the exported images and tracks
-    path_images = "images"
-    path_labels = "labels"
-    if not os.path.exists(path_images):
-        os.mkdir(path_images)
-    if not os.path.exists(path_labels):
-        os.mkdir(path_labels)
+    output_path = output_path + "/data"
+    if not os.path.exists(output_path):
+        os.mkdir(output_path)
+    output_path = output_path + "/obj"
+    if not os.path.exists(output_path):
+        os.mkdir(output_path)
 
     frame_width = ROI[1][1] - ROI[1][0]
     frame_height = ROI[0][1] - ROI[0][0]
@@ -202,9 +201,9 @@ def video_to_dataset(video, tracks, ROI, use_frames=(0, math.inf), video_name="f
         frame = frame[ROI[0][0]:ROI[0][1], ROI[1][0]:ROI[1][1]]
 
         # save the cropped frame to the respective folder
-        cv2.imwrite(path_images + "/" + video_name + "_frame_" + str(frame_num) + ".jpg", frame)
+        cv2.imwrite(output_path + "/" + dataset_img_name + "_frame_" + str(frame_num) + ".JPG", frame)
 
-        with open(path_labels + "/" + video_name + "_frame_" + str(frame_num) + ".txt", "w") as f:
+        with open(output_path + "/" + dataset_img_name + "_frame_" + str(frame_num) + ".txt", "w") as f:
             # iterate through all columns and draw rectangles for all non 0 values
             for track in range(math.floor(((tracks.shape[1]) - 1) / 2)):
                 if tracks[frame_num, track * 2 + 1] != 0:
