@@ -6,7 +6,7 @@ Generating synthetic datasets to improve inference on all sorts of computer-visi
 # External files
 
 Additional assets need to be dowloaded and placed into the content folder, which are hosted externally under the following link:
-[Google Drive]()
+[Google Drive](https://drive.google.com/file/d/1FiboPJmrhqv6cDB2Ara-2n3-yDdHg0sh/view?usp=sharing)
 
 # Generator TODOs
 
