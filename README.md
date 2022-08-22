@@ -1,7 +1,11 @@
 # FARTS
 Fabi And René's Training-data Synthesizer
 
-For now, just the parsers are hosted here, but we'll soon include the entire generator source code as well.
+Generating synthetic datasets to improve inference on all sorts of computer vision tasks involving insects.
+
+# Generator TODOs
+
+(Hosted externally in HacknPlan for now)
 
 # Parser TODOs
 
@@ -9,11 +13,11 @@ For now, just the parsers are hosted here, but we'll soon include the entire gen
   * YOLO
     * DONE
   * DLC
-    * double check data parsing with complete skeleton
+    * DONE
   * HERO DLC
-    * read in new json format files
+    * DONE
   * COCO
-    * read in new json format files
+    * DONE
   * Custom 3D
     * read in new json format files
     * check new 3D camera intrinsics and extrinsics and ensure the reprojected 3D coordinates align with the original 2D coordinates
@@ -22,5 +26,3 @@ For now, just the parsers are hosted here, but we'll soon include the entire gen
 * Generate new example datasets
   * Single
   * Multi
-
-* Add guide on how to solve EXCEPTION_ACCESS_VIOLATION issues under Windows (10 & 11)
