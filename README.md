@@ -1,7 +1,12 @@
 # FARTS
 Fabi And René's Training-data Synthesizer
 
-Generating synthetic datasets to improve inference on all sorts of computer vision tasks involving insects.
+Generating synthetic datasets to improve inference on all sorts of computer-vision tasks involving insects.
+
+# External files
+
+Additional assets need to be dowloaded and placed into the content folder, which are hosted externally under the following link:
+[Google Drive]()
 
 # Generator TODOs
 
