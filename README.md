@@ -7,13 +7,14 @@ Generating synthetic datasets to improve inference on all sorts of computer-visi
 
 ## Installing Unreal Engine
 ### Minimum system requirements:
-•	**Windows 10** (other operating systems may work but are untested)
-•	>50 GB of disk space (the faster the better)
-o	Unreal engine itself will occupy roughly 30 GB
-o	Another ~5GB for the complete project including 3D assets and materials
-o	>5 GB per 10k sample dataset at 2k resolution, using all available passes
-•	Dedicated GPU with 6GB VRAM (currently, only tested on NVIDIA GPUs)
-•	16 GB RAM
+
+*	Windows 10 (other operating systems may work but are untested)
+* ~50 GB of disk space (the faster the better)
+  * Unreal engine itself will occupy roughly 30 GB
+  * Another ~5GB for the complete project including 3D assets and materials
+  *	~5 GB per 10k sample dataset at 2k resolution, using all available passes
+*	Dedicated GPU with 6GB VRAM (currently, only tested on NVIDIA GPUs)
+*	16 GB RAM
 
 ### Unreal Installation Guide
 1.	You will first need to create an [Epic games account](https://www.epicgames.com/site/login) which we will later link to your Github profile. This grants you access to the Unreal Engine source code, including Blender Plugins (i.e., Send2Unreal), and as a bonus, grant access to Quixel’s asset library to add additional meshes and materials to your generator environment:
