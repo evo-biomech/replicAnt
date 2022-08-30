@@ -1,6 +1,8 @@
 # FARTS
 Fabi And René's Training-data Synthesizer
 
+![](documentation_images/06_launch.png)
+
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
 
 ## Installing Unreal Engine
