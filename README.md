@@ -72,11 +72,11 @@ Download and unpack the files into the **Content** directory of the FARTS projec
 
 4. In the content browser, right click on the file named **FARTS_Interface** and select **Run Editor Utility Widget**.
 
-![](documentation_images/07_add_FARTS_interface.png)
+![](documentation_images/07_add_FARTS_interface.PNG)
 
 Now, you should be able to see the FARTS interface on the left side of your screen, where you can configure everything part of the generator, from file types and simulated colonies, to adding further animals, and controlling the generator seed for benchmarking and debugging purposes.
 
-![](documentation_images/08_show_FARTS_interface.png)
+![](documentation_images/08_show_FARTS_interface.PNG)
 
 In theory, you can now start generating your first datasets right away (if you are planning on only using the provided insect models). In case you want to bring your own insect models into the generator follow the "3D model to dataset" guide below.
 
