@@ -119,6 +119,39 @@ In theory, you can now start generating your first datasets right away (if you a
 Nice one! Installation-wise we are done! 
 Time to prepare a model in Blender to send over and configure for generating some data!
 
+## Preparing models in Blender for Unreal
+
+Generally, the lower the vertex count, while still appearing realistic, the better. Unreal engine deals very well with reidiculous numbers of polygons, but simulating hundreds of high resolution insects can still be a challenging task for your machine. Aim for >20,000 triangles inside your model, and you are good. I'll update this page with a full retopology guide soon, but for now, just employ the techniques of your trade to get your model to roughly fit this suggestion. Larger models will work, but I hope you have a strong machine that can deal with them.
+
+Further notes will also follow on the standard rigging convention used here, but in theory, any model and rig combination is possible. Make sure, your model is posed with all tarsi in ground contact in a somewhat natural pose. This is important, as we are going to use IK solvers to have the appendages interact with elements in the generated environment.
+
+Let's assume your model is already **retopologised**, **rigged**, and **ready**!
+
+1. **Apply** your **armature** in the **modifier** tab, and **delete all vertex groups**. We need to do this once, so all units and joint orientations will scale correctly.
+
+![](documentation_images/17_apply_armature.PNG)
+
+2. Apply all transforms (scale, rotation, position) to your mesh. In Object mode, select the mesh, hit "ctrl + a" and select All Transforms. Repeat this step for the armature. Without applying transforms, Unreal and Blender will throw all sorts of fun error messages at you. Nobody wants that.
+
+![](documentation_images/18_apply_transforms.PNG)
+
+3. Now select the **armature** and go into **pose mode**. Click **Pose > Apply > Apply Pose** as Rest Pose, to make the current pose the default.
+
+![](documentation_images/19_rest_pose.PNG)
+
+4. Parent the mesh back to the armature with automatic weights. Double check the influence of each joint via **weight painting**. If joints affect unwated areas, this will lead to unrealistic generated poses.
+
+*	[Optional] Create Normal maps. This can be done either in Blender directly by baking a normal map as an additional image texture (see texture baking), in Photoshop, or, nowadays it seems, in literally any image editing program… However, it’s best to do it directly in Blender to preserve information between unwrapped regions, which avoids sharp artifacts between islands in the unwrapped texture.
+
+5. Finally, in the **Scene Collection** move both your armature and your mesh into the **Export** collection. Now you can click on **Pipeline > Export > Send to Unreal**. Remember, your Unreal project needs to be open in order for this to work, and you must have created the specified folder referenced in the export settings (see step 3 of the installation guide above)
+
+![](documentation_images/20_send2ue_export.PNG)
+
+… and hope for the best.
+
+## Including new models in the generator (Unreal)
+
+
 # NOTES
 ## External files
 
