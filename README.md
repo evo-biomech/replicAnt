@@ -80,6 +80,45 @@ Now, you should be able to see the FARTS interface on the left side of your scre
 
 In theory, you can now start generating your first datasets right away (if you are planning on only using the provided insect models). In case you want to bring your own insect models into the generator follow the "3D model to dataset" guide below.
 
+## 3D model to dataset (Blender to Unreal)
+
+### Requirements:
+* [Blender](https://www.blender.org/) (v3.0.1 or later)
+* [send2unreal](https://github.com/EpicGames/BlenderTools) (v2.1 or later)
+•	Unreal engine (installed via Epic Games Launcher, see above, v5.0.2 or later)
+•	*Patience.*
+
+1. download [send2unreal](https://github.com/EpicGames/BlenderTools) and don't unzip the file. You can install the addon in its zipped form straight from Blender. In Blender, under **edit/preferences/Add-ons** click on **Install...** and navigate to the **send2ue** zip file on your computer.
+
+![](documentation_images/10_install_Blender_plugin.PNG)
+
+2. You should now see a new top at the top of your Blender Window, named **Pipeline**. Click on it, and then select **Export/Settings_Dialog** to configure how we want things to be sent over to Unreal.
+
+![](documentation_images/11_config_send2ue.PNG)
+
+3. Inside the **Paths** tab, enter the desired location of your mesh / textures / armatures inside the Unreal project. In our case, this will be **Game/Subjects/NAME_OF_YOUR_SPECIMEN**. You will have to manually create the **NAME_OF_YOUR_SPECIMEN** folder inside the **Subjects** folder of the Unreal project, but this will make it possible to make changes to our model in Blender and simply send the updated version over to Unreal without having to set up everything again.
+
+![](documentation_images/12_config_path.PNG)
+
+4. Double check the export settings, specifically the **.FBX** settings. We want **Apply Unit** to be checked, the Z axis to be up, and NO leaf bones to be added.
+
+![](documentation_images/13_config_export.PNG)
+
+5. If everything went according to plan, you should also be able to see an additional folder in your **Scene Collection** titled **Export**. Anything we place in here, Unreal will attempt to import, when we are ready to click on **Send to Unreal** (But don't do that now. We still have a few things to check first.)
+
+![](documentation_images/14_send2ue_collection.PNG)
+
+6. If you haven't done that already, launch **FARTS.uproject** by double clicking on the file. We need to check whether Unreal has the right plugins enabled to receive data from our Blender instance. Click on **Settings** (top left) and then on **Plugins**.
+
+![](documentation_images/15_ue_plugins.PNG)
+
+7. Check, whether the **Editor Scripting Utilities** and **Python Ediotor Script** plugins are activated. If they are not, enable them now.
+
+![](documentation_images/16_ue_plugins_script.PNG)
+
+Nice one! Installation-wise we are done! 
+Time to prepare a model in Blender to send over and configure for generating some data!
+
 # NOTES
 ## External files
 
