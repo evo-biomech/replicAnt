@@ -85,8 +85,8 @@ In theory, you can now start generating your first datasets right away (if you a
 ### Requirements:
 * [Blender](https://www.blender.org/) (v3.0.1 or later)
 * [send2unreal](https://github.com/EpicGames/BlenderTools) (v2.1 or later)
-•	Unreal engine (installed via Epic Games Launcher, see above, v5.0.2 or later)
-•	*Patience.*
+*	Unreal engine (installed via Epic Games Launcher, see above, v5.0.2 or later)
+*	*Patience.*
 
 1. download [send2unreal](https://github.com/EpicGames/BlenderTools) and don't unzip the file. You can install the addon in its zipped form straight from Blender. In Blender, under **edit/preferences/Add-ons** click on **Install...** and navigate to the **send2ue** zip file on your computer.
 
