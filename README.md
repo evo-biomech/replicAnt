@@ -66,6 +66,19 @@ Download and unpack the files into the **Content** directory of the FARTS projec
 
 ![](documentation_images/05_external_files.png)
 
+3. Launch **FARTS.uproject** by double clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. If this is the case you can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases). 
+
+![](documentation_images/06_launch.png)
+
+4. In the content browser, right click on the file named **FARTS_Interface** and select **Run Editor Utility Widget**.
+
+![](documentation_images/07_add_FARTS_interface.png)
+
+Now, you should be able to see the FARTS interface on the left side of your screen, where you can configure everything part of the generator, from file types and simulated colonies, to adding further animals, and controlling the generator seed for benchmarking and debugging purposes.
+
+![](documentation_images/08_show_FARTS_interface.png)
+
+In theory, you can now start generating your first datasets right away (if you are planning on only using the provided insect models). In case you want to bring your own insect models into the generator follow the "3D model to dataset" guide below.
 
 # NOTES
 ## External files
