@@ -151,6 +151,49 @@ Let's assume your model is already **retopologised**, **rigged**, and **ready**!
 
 ## Including new models in the generator (Unreal)
 
+1. Check your transfered models in the Content browser to ensure they made it over to the Unreal Project.
+
+![](documentation_images/21_models_in_ue.PNG)
+
+2. Create a material instance from **Subjects/M_Subject01_SSInsects** and drag it into your model folder.
+
+![](documentation_images/22_ue_material_instance.PNG)
+
+3. Open the material instance and replace the existing textures (albedo & optionally normal) with your own. (In case these materials are not editable, instead of making a **material instance** of **Subjects/M_Subject01_SSInsects**, make a **copy** of it and try again.)
+
+![](documentation_images/23_ue_material_setup.PNG)
+
+4. Assign the **SK_InsectBase_Skeleton** to your skeletal mesh by right clicking it and selecting **Skeleton > Assign Skeleton**.
+
+![](documentation_images/24_assign_skeleton_A.PNG)
+
+![](documentation_images/24_assign_skeleton_B.PNG)
+
+5. Compute the low-poly collision mesh from the **Physics Asset** of your imported mesh. Open the **Physics Asset** and delete any hierarchy that is already present. Then, under Tools (right side) match the parameters shown in the image below and click on **Genrate All Bodies**.
+
+![](documentation_images/25_update_collision.PNG)
+
+6. Create a **Child Blueprint Class** from **SubjectBase/BP_sbj_InsectBase** and also move it into your mesh folder.
+
+![](documentation_images/26_the_child.PNG)
+
+7. Rename the **Child Blue Print Class** to something more fitting of the newly added mesh so we can find it when we want to select it inside the generator. Then open the file. In there, select the **Insect_SkeletalMesh** on the left side and then make the following changes on the right side:
+
+* for the **Anim Class**, select **ABP_InsectBase_C**
+* for the **Skeletal Mesh**, select your newly imported skeletal mesh
+* for the **Materials > Element 0**, select the created **Material Instance** (not the original material, as otherwise the generator cannot apply variations to it at runtime)
+
+![](documentation_images/27_the_blueprint.PNG)
+
+8. Select your new mewly created **Child Blue Print Class** as part of your **Colony** in the **FARTS_Interface**, under **Colony > Types**. You can also add additional subjects here, the sky is the limit. By pressing on **Spawn Preview Colony** you can see what your generated colony will look like. (You may need to move to the top of the generated world, where the **Colony Preview Groundplane** is located.
+
+![](documentation_images/28_the_colony.PNG)
+
+9. **You did it!**  (well, hopefully) 
+If everything has gone according to plan, you should now be able to hit **Generate** and watch the magic happen. In a follow-up section, I will detail what each of the generator parameters does. But for: **Happy Generatin'!**
+
+![](documentation_images/29_examples.PNG)
+
 
 # NOTES
 ## External files
