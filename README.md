@@ -1,5 +1,5 @@
 # FARTS
-Fabi And René's Training-data Synthesizer
+**F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
 
 ![](documentation_images/06_launch.png)
 
