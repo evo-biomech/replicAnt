@@ -1,0 +1,15 @@
+{
+    "Image Resolution": {
+        "x": 512,
+        "y": 512
+    },
+    "Iterations": 10,
+    "Name": "input-single",
+    "Seed": 12345,
+    "Subject Variations": {
+        "1": {
+            "Class": "sungaya_inexpectata_first_instar",
+            "Scale": 0.10495960712432861
+        }
+    }
+}
