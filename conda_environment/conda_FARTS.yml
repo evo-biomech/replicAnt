@@ -1,0 +1,18 @@
+# FARTS.yml
+
+# FARTS - Fabi And René's Training-data Synthesizer
+# © Fabian Plum, René Bulla 2023
+# MIT License
+
+name: FARTS
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pip
+  - numpy
+  - matplotlib
+  - opencv
+  - json5
+  - pandas
+  - pathlib
