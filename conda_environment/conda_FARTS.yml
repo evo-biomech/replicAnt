@@ -16,3 +16,5 @@ dependencies:
   - json5
   - pandas
   - pathlib
+  - imutils
+  - scikit-learn
