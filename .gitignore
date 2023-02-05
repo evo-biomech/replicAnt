@@ -8,6 +8,7 @@ evaluation/.ipynb_checkpoints/*
 evaluation/__pycache__/*
 helper/.ipynb_checkpoints/*
 helper/__pycache__/*
+UE5_parsers/.ipynb_checkpoints/*
 
 # external files
 Content/Internal/MaterialGeneration/Materials/
