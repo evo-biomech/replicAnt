@@ -1,5 +1,5 @@
 classes = 5
-train = data/train.txt
-test = data/test.txt
+train = data/em1_train.txt
+test = data/em1_test.txt
 names = data/obj.names
 backup = backup/

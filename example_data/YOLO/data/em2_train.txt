@@ -1,5 +1,5 @@
-data/obj/input-multi_04_example_multi.JPG
-data/obj/input-multi_09_example_multi.JPG
+data/obj/input-multi_02_example_multi.JPG
+data/obj/input-multi_08_example_multi.JPG
 data/obj/input-multi_01_example_multi.JPG
 data/obj/input-multi_06_example_multi.JPG
 data/obj/input-multi_07_example_multi.JPG

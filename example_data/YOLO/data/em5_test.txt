@@ -1,0 +1,2 @@
+data/obj/input-multi_00_example_multi.JPG
+data/obj/input-multi_05_example_multi.JPG
