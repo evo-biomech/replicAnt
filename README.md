@@ -16,6 +16,30 @@ Generating synthetic datasets to improve inference on all sorts of computer-visi
 *	Dedicated GPU with 6GB VRAM (currently, only tested on NVIDIA GPUs)
 *	16 GB RAM
 
+### Python Environment (for parser notebooks)
+
+```bash
+cd conda_environment
+conda env create -f conda_FARTS.yml
+```
+
+After the environment has been created successfully, re-start the terminal, and run the following line to activate the environment, and to continue the installation.
+
+ ```bash
+conda activate FARTS
+```
+
+If you do not wish to install the pre-configured environment, here are the dependencies:
+
+  - python >= 3.7
+  - pip
+  - numpy
+  - matplotlib
+  - opencv
+  - json5
+  - pandas
+  - pathlib
+
 ### Unreal Installation Guide
 1.	You will first need to create an [Epic games account](https://www.epicgames.com/site/login) which we will later link to your Github profile. This grants you access to the Unreal Engine source code, including Blender Plugins (i.e., Send2Unreal), and as a bonus, grant access to Quixel’s asset library to add additional meshes and materials to your generator environment:
 
