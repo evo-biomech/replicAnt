@@ -1,5 +1,6 @@
 # python environment specific
 *.pyc
+.idea/*
 
 # jupyter related
 .ipynb_checkpoints/*
