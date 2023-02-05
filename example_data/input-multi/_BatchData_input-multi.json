@@ -1,0 +1,51 @@
+{
+    "Image Resolution": {
+        "x": 512,
+        "y": 512
+    },
+    "Iterations": 10,
+    "Name": "input-multi",
+    "Seed": 12345,
+    "Subject Variations": {
+        "1": {
+            "Class": "Atta_vollenweideri_00491",
+            "Scale": 0.10495960712432861
+        },
+        "10": {
+            "Class": "Gnathamitermes_soldier",
+            "Scale": 0.41958999633789062
+        },
+        "2": {
+            "Class": "Gnathamitermes_soldier",
+            "Scale": 0.28072071075439453
+        },
+        "3": {
+            "Class": "Leptoglossus_zonatus",
+            "Scale": 0.74016904830932617
+        },
+        "4": {
+            "Class": "Atta_vollenweideri_00501",
+            "Scale": 0.9833831787109375
+        },
+        "5": {
+            "Class": "Atta_vollenweideri_00491",
+            "Scale": 0.58486175537109375
+        },
+        "6": {
+            "Class": "Atta_vollenweideri_00222",
+            "Scale": 0.33426356315612793
+        },
+        "7": {
+            "Class": "Atta_vollenweideri_00222",
+            "Scale": 0.80441415309906006
+        },
+        "8": {
+            "Class": "Atta_vollenweideri_00501",
+            "Scale": 0.36729609966278076
+        },
+        "9": {
+            "Class": "Atta_vollenweideri_00491",
+            "Scale": 0.67349851131439209
+        }
+    }
+}
