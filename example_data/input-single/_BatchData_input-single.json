@@ -1,15 +1,1 @@
-{
-    "Image Resolution": {
-        "x": 512,
-        "y": 512
-    },
-    "Iterations": 10,
-    "Name": "input-single",
-    "Seed": 12345,
-    "Subject Variations": {
-        "1": {
-            "Class": "sungaya_inexpectata_first_instar",
-            "Scale": 0.10495960712432861
-        }
-    }
-}
+{"Name":"input-single","Iterations":10,"Image Resolution":{"x":512,"y":512},"Seed":12345,"Subject Variations":{"1":{"Class":"BP_sbjIct_sungaya_inexpectata_firsth_instar_straight_C","Scale":0.10495960712432861}}}
