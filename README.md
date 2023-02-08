@@ -9,14 +9,23 @@ Generating synthetic datasets to improve inference on all sorts of computer-visi
 ### Minimum system requirements:
 
 *	Windows 10 (other operating systems may work but are untested)
-* ~50 GB of disk space (the faster the better)
+* ~ 50 GB of disk space (the faster the better)
   * Unreal engine itself will occupy roughly 30 GB
   * Another ~5GB for the complete project including 3D assets and materials
-  *	~5 GB per 10k sample dataset at 2k resolution, using all available passes
+  *	~5 GB per 10k sample dataset at 2k resolution (when using all available passes)
 *	Dedicated GPU with 6GB VRAM (currently, only tested on NVIDIA GPUs)
 *	16 GB RAM
 
 ### Python Environment (for parser notebooks)
+
+To convert the generated datasets into formats accepted by common computer vision frameworks,
+we have provided a number of [parsers](UE5_parsers) as interactive Jupyter notebooks.
+
+You require a python installation on your system to make use of them. For ease of use, we
+provide an example conda environment, as well as a list of dependencies, in case you want to
+use a custom python installation / environment:
+
+**Install dependencies via conda**
 
 ```bash
 cd conda_environment
@@ -33,6 +42,7 @@ If you do not wish to install the pre-configured environment, here are the depen
 
   - python >= 3.7
   - pip
+  - notebook
   - numpy
   - matplotlib
   - opencv
