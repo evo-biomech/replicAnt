@@ -39,6 +39,8 @@ If you do not wish to install the pre-configured environment, here are the depen
   - json5
   - pandas
   - pathlib
+  - imutils
+  - scikit-learn
 
 ### Unreal Installation Guide
 1.	You will first need to create an [Epic games account](https://www.epicgames.com/site/login) which we will later link to your Github profile. This grants you access to the Unreal Engine source code, including Blender Plugins (i.e., Send2Unreal), and as a bonus, grant access to Quixel’s asset library to add additional meshes and materials to your generator environment:
