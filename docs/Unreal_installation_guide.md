@@ -5,8 +5,6 @@
 
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
 
-![](docs/figures/Fig_1_dark.png)
-
 ## Installing Unreal Engine
 ### Minimum system requirements:
 
