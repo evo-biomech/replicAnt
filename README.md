@@ -109,7 +109,7 @@ If all has gone well, you should be able to see on your GitHub profile that you 
 
 5.	Once the **Unreal Engine** installation has completed in the background, restart your computer. Afterwards, we’ll set up the project.
 
-###Setting up the FARTS project
+### Setting up the FARTS project
 1.	If you have not done so already, clone the FARTS repository to your computer. The total project size will be ~5GB, including 3D assets and materials to populate the procedurally generated world.
 
 ```bash
@@ -138,7 +138,7 @@ Now, you should be able to see the FARTS interface on the left side of your scre
 
 ![](documentation_images/08_show_FARTS_interface.PNG)
 
-In theory, you can now start generating your first datasets right away (if you are planning on only using the provided insect models). In case you want to bring your own insect models into the generator follow the "3D model to dataset" guide below.
+In theory, you can now start generating your first datasets right away (if you are planning on only using the provided subject models). In case you want to bring your own insect models into the generator follow the ["3D model to dataset" guide](docs/Bringing_3D_models_into_Unreal_guide.md).
 
 ***
 ## Notes and Resources
