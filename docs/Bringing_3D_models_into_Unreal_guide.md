@@ -103,7 +103,7 @@ In some cases, you will see an additional skeletal element listed here, named **
 skeleton correctly (If you proceed, the animation blueprints may no longer work correctly for this particular mesh).
 
 Double-check (in Blender) whether your **Armature** follows the same naming convention as our [base_rig](../example_data/base_rig.blend).
-Refer to the [**Troubleshooting guide**](docs/troubleshooting.md) for additional guidance.
+Refer to the [**Troubleshooting guide**](troubleshooting.md) for additional guidance.
 
 5. Compute the low-poly collision mesh from the **Physics Asset** of your imported mesh. Open the **Physics Asset** and delete any hierarchy that is already present. Then, under Tools (right side) match the parameters shown in the image below and click on **Genrate All Bodies**.
 
