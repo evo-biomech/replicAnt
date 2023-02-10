@@ -94,6 +94,14 @@ Let's assume your model is already **retopologised**, **rigged**, and **ready**!
 
 ![](../documentation_images/24_assign_skeleton_B.PNG)
 
+**Quick note:**
+
+In some cases, you will see an additional skeletal element listed here, named **root**, which may prevent assigning the
+skeleton correctly (If you proceed, the animation blueprints may no longer work correctly for this particular mesh).
+
+Double-check (in Blender) whether your **Armature** follows the same naming convention as our [base_rig](../example_data/base_rig.blend).
+Refer to the [**Troubleshooting guide**](docs/troubleshooting.md) for additional guidance.
+
 5. Compute the low-poly collision mesh from the **Physics Asset** of your imported mesh. Open the **Physics Asset** and delete any hierarchy that is already present. Then, under Tools (right side) match the parameters shown in the image below and click on **Genrate All Bodies**.
 
 ![](../documentation_images/25_update_collision.PNG)
