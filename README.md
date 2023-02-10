@@ -3,9 +3,31 @@
 
 ![](documentation_images/06_launch.png)
 
-Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
+_Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them._
+
+***
 
 ![](docs/figures/Fig_1_dark.png)
+**FARTS** produces procedurally generated and richly annotated image samples from 3D models of arthropod specimens, 
+which form the basis of a wide range of computer vision applications. (**a**) The input to the FARTS pipeline are 
+digital 3D models, which we generated with the [open-source photogrammetry platform - scAnt](https://github.com/evo-biomech/scAnt). 
+Each model comprises a (**b**) textured mesh, (**c**) an armature which provides control over animal pose, and 
+(**d**) a low-polygonal collision mesh to control the interaction of the model with objects in its environment. 
+(**e**) 3D models are placed within scenes procedurally generated with the free software 
+[Unreal Engine 5](https://www.unrealengine.com/en-US/unreal-engine-5). (**f**) Every scene consists of the same core elements, 
+each with configurable randomisation routines to maximise variability in the generated data. 3D assets are scattered 
+on a ground topology; layered materials, decals, and light sources provide significant variability for the generated 
+scenes. From each scene, we generate  (**g**) image, (**h**) ID, (**i**) depth, and normal 
+passes, accompanied by (**j**) an annotation data text file which contains rich information on image contents. 
+The combination of image passes, and data files constitute synthetic datasets that can be used to train networks 
+specialised for a large variety of deep learning-based computer vision applications, including (k) 
+[detection](UE5_parsers/Generate_YOLO_Style_Dataset_JSON.ipynb), 
+(**l**) [tracking](https://github.com/FabianPlum/OmniTrax), 
+(**m**) [2D](UE5_parsers/Generate_DLC_Style_Dataset.ipynb) 
+and [3D](UE5_parsers/Generate_Custom_3D_Dataset.ipynb) pose estimation, 
+(**n**) and [semantic segmentation](UE5_parsers/Generate_mmlab_segmentation_Style_Dataset.ipynb).
+
+***
 
 ## Installing Unreal Engine
 ### Minimum system requirements:
