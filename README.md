@@ -6,8 +6,9 @@
 _Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them._
 
 ***
+<img src=docs/figures/Fig_1_dark.png#gh-dark-mode-only >
+<img src=docs/figures/Fig_1_bright.png#gh-light-mode-only > 
 
-![](docs/figures/Fig_1_dark.png)
 **FARTS** produces procedurally generated and richly annotated image samples from 3D models of arthropod specimens, 
 which form the basis of a wide range of computer vision applications. (**a**) The input to the FARTS pipeline are 
 digital 3D models, which we generated with the [open-source photogrammetry platform - scAnt](https://github.com/evo-biomech/scAnt). 
