@@ -48,7 +48,10 @@ Time to prepare a model in Blender to send over and configure for generating som
 
 Generally, the lower the vertex count, while still appearing realistic, the better. Unreal engine deals very well with reidiculous numbers of polygons, but simulating hundreds of high resolution insects can still be a challenging task for your machine. Aim for >20,000 triangles inside your model, and you are good. I'll update this page with a full retopology guide soon, but for now, just employ the techniques of your trade to get your model to roughly fit this suggestion. Larger models will work, but I hope you have a strong machine that can deal with them.
 
-Further notes will also follow on the standard rigging convention used here, but in theory, any model and rig combination is possible. Make sure, your model is posed with all tarsi in ground contact in a somewhat natural pose. This is important, as we are going to use IK solvers to have the appendages interact with elements in the generated environment.
+Additional notes will also follow on the [standard rigging convention](../example_data/base_rig.blend) used here, but in theory, any model and rig combination is possible. Make sure, your model is posed with all tarsi in ground contact in a somewhat natural pose. This is important, as we are going to use IK solvers to have the appendages interact with elements in the generated environment.
+
+<img src=docs/figures/rig_layout_dark.png#gh-dark-mode-only >
+<img src=docs/figures/rig_layout_bright.png#gh-light-mode-only > 
 
 Let's assume your model is already **retopologised**, **rigged**, and **ready**!
 
