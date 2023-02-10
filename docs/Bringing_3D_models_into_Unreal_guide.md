@@ -50,8 +50,8 @@ Generally, the lower the vertex count, while still appearing realistic, the bett
 
 Additional notes will also follow on the [standard rigging convention](../example_data/base_rig.blend) used here, but in theory, any model and rig combination is possible. Make sure, your model is posed with all tarsi in ground contact in a somewhat natural pose. This is important, as we are going to use IK solvers to have the appendages interact with elements in the generated environment.
 
-<img src=docs/figures/rig_layout_dark.png#gh-dark-mode-only >
-<img src=docs/figures/rig_layout_bright.png#gh-light-mode-only > 
+<img src=figures/rig_layout_dark.png#gh-dark-mode-only >
+<img src=figures/rig_layout_bright.png#gh-light-mode-only > 
 
 Let's assume your model is already **retopologised**, **rigged**, and **ready**!
 
