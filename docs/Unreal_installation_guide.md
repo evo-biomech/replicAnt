@@ -1,7 +1,7 @@
 # FARTS
 **F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
 
-![](documentation_images/06_launch.png)
+![](../documentation_images/06_launch.png)
 
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
 
@@ -25,27 +25,27 @@ Generating synthetic datasets to improve inference on all sorts of computer-visi
 
 [Epic Games Launcher](https://www.epicgames.com/site/en-US/home)
 
-![](documentation_images/00_epic_unreal.PNG)
+![](../documentation_images/00_epic_unreal.PNG)
 
 3.	Open the installed **Epic Games Launcher** and click on **Unreal Engine** on the left side of the window.
 
-![](documentation_images/01_epic_unreal.PNG)
+![](../documentation_images/01_epic_unreal.PNG)
 
 Now, click on **Library** and click on the **+** icon to install a new version of Unreal Engine. As we built FARTS on Unreal Engine 5, select the latest Unreal Engine 5 release, and follow the installation guide. 
 
 Unless you are planning on running extensive debugging or further development, only selecting **core components** should be sufficient. All additionally required functionality is provided in our project environment and, alternatively, can be installed later on.
 
-![](documentation_images/02_epic_unreal.PNG)
+![](../documentation_images/02_epic_unreal.PNG)
 
 4.	While your computer is busy installing Unreal Engine, connect your GitHub account to your newly created Epic Games account. For a more thorough guide, refer to the (official documentation](https://www.unrealengine.com/en-US/ue-on-github)
 
 In short, head over to your [Epic Games account]( https://www.unrealengine.com/account/connections), and under **Connections**, connect to your GitHub profile. Simply follow the instructions prompted in your browser and authorize Epic Games. You will then receive a confirmation email to join the Epic Games organisation on GitHub to access all source code and plugins.
 
-![](documentation_images/03_link_account.PNG)
+![](../documentation_images/03_link_account.PNG)
 
 If all has gone well, you should be able to see on your GitHub profile that you have successfully joined Epic Games!
 
-![](documentation_images/04_link_account.PNG)
+![](../documentation_images/04_link_account.PNG)
 
 5.	Once the **Unreal Engine** installation has completed in the background, restart your computer. Afterwards, we’ll set up the project.
 
@@ -64,18 +64,18 @@ This will take a while. There are a lot of files to be copied.
 
 Download and unpack the files into the **Content** directory of the FARTS project.
 
-![](documentation_images/05_external_files.png)
+![](../documentation_images/05_external_files.png)
 
-3. Launch **FARTS.uproject** by double clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. If this is the case you can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases). 
+3. Launch **FARTS.uproject** by double-clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. If this is the case you can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases). 
 
-![](documentation_images/06_launch.png)
+![](../documentation_images/06_launch.png)
 
-4. In the content browser, right click on the file named **FARTS_Interface** and select **Run Editor Utility Widget**.
+4. In the content browser, right-click on the file named **FARTS_Interface** and select **Run Editor Utility Widget**.
 
-![](documentation_images/07_add_FARTS_interface.PNG)
+![](../documentation_images/07_add_FARTS_interface.PNG)
 
 Now, you should be able to see the FARTS interface on the left side of your screen, where you can configure everything part of the generator, from file types and simulated colonies, to adding further animals, and controlling the generator seed for benchmarking and debugging purposes.
 
-![](documentation_images/08_show_FARTS_interface.PNG)
+![](../documentation_images/08_show_FARTS_interface.PNG)
 
 In theory, you can now start generating your first datasets right away (if you are planning on only using the provided insect models). In case you want to bring your own insect models into the generator follow the [3D model to dataset guide](Bringing_3D_models_into_Unreal_guide.md).
