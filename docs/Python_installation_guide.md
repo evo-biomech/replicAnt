@@ -1,7 +1,7 @@
 # FARTS
 **F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
 
-![](../documentation_images/06_launch.png)
+![](../images/06_launch.png)
 
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
 
