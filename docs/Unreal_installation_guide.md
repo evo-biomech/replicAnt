@@ -78,4 +78,4 @@ Now, you should be able to see the FARTS interface on the left side of your scre
 
 ![](../images/08_show_FARTS_interface.PNG)
 
-In theory, you can now start generating your first datasets right away (if you are planning on only using the provided insect models). In case you want to bring your own insect models into the generator follow the [3D model to dataset guide](Bringing_3D_models_into_Unreal_guide.md).
+In theory, you can now start generating your first datasets right away (if you are planning on only using the provided insect models). In case you want to bring your own insect models into the generator follow the [3D model to dataset guide](03_Bringing_3D_models_into_Unreal_guide.md).
