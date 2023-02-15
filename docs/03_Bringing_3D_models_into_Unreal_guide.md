@@ -46,14 +46,22 @@ Time to prepare a model in Blender to send over and configure for generating som
 
 ## Preparing models in Blender for Unreal
 
-Generally, the lower the vertex count, while still appearing realistic, the better. Unreal engine deals very well with reidiculous numbers of polygons, but simulating hundreds of high resolution insects can still be a challenging task for your machine. Aim for >20,000 triangles inside your model, and you are good. I'll update this page with a full retopology guide soon, but for now, just employ the techniques of your trade to get your model to roughly fit this suggestion. Larger models will work, but I hope you have a strong machine that can deal with them.
+Generally, the lower the vertex count, while still appearing realistic, the better. Unreal engine deals very well with reidiculous numbers of polygons, but simulating hundreds of high resolution insects can still be a challenging task for your machine. 
+Aim for >20,000 triangles inside your model, and you are good. For details, refer to our [**01 Retopologising 3D models guide**](01_Retopologising_3D_models.md).
 
-Additional notes will also follow on the [standard rigging convention](../example_data/base_rig.blend) used here, but in theory, any model and rig combination is possible. Make sure, your model is posed with all tarsi in ground contact in a somewhat natural pose. This is important, as we are going to use IK solvers to have the appendages interact with elements in the generated environment.
+To make use of our provided animation blueprints, follow our [standard rigging convention](../example_data/base_rig.blend),
+as detailed in the [**02 Rigging 3D models guide**](02_Rigging_3D_models.md).
 
 <img src=figures/rig_layout_dark.png#gh-dark-mode-only >
 <img src=figures/rig_layout_bright.png#gh-light-mode-only > 
 
-Let's assume your model is already **retopologised**, **rigged**, and **ready**!
+In theory, any model and rig combination is possible. Make sure, your model is posed with all tarsi in ground 
+contact in a somewhat natural pose. This is important, as we are going to use IK solvers to have the appendages 
+interact with elements in the generated environment.
+
+#### Attention:
+This guide assumes that your model is already [**01 retopologised**](01_Retopologising_3D_models.md) and
+[**02 rigged**](02_Rigging_3D_models.md)! So let's get started:
 
 1. **Apply** your **armature** in the **modifier** tab, and **delete all vertex groups**. We need to do this once, so all units and joint orientations will scale correctly.
 
@@ -126,17 +134,11 @@ Refer to the [**Troubleshooting guide**](troubleshooting.md) for additional guid
 ![](../images/28_the_colony.PNG)
 
 9. **You did it!**  (well, hopefully) 
-If everything has gone according to plan, you should now be able to hit **Generate** and watch the magic happen. In a follow-up section, I will detail what each of the generator parameters does. But for: **Happy Generatin'!**
+
+If everything has gone according to plan, you should now be able to hit **Generate** and watch the magic happen. 
+In the [next section](04_Generating_your_first_dataset.md), we will detail what each of the generator parameters does.
 
 ![](../images/29_examples.PNG)
 
-
-# NOTES
-## External files
-
-Additional assets need to be dowloaded and placed into the content folder, which are hosted externally under the following link:
-[Google Drive](https://drive.google.com/file/d/1FiboPJmrhqv6cDB2Ara-2n3-yDdHg0sh/view?usp=sharing)
-
-## Generator TODOs
-
-(Hosted externally in HacknPlan for now)
+### Next up: 
+> [**04 Generating your first dataset**](04_Generating_your_first_dataset.md)
