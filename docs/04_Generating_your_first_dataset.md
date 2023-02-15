@@ -11,3 +11,6 @@ Generating synthetic datasets to improve inference on all sorts of computer-visi
 * [Blender](https://www.blender.org/) (v3.0.1 or later)
 
 ## WIP
+
+### Next up: 
+> [**05 Adding custom assets and scatterers**](05_Adding_custom_assets_and_scatterers.md)
