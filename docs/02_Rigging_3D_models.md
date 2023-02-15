@@ -11,3 +11,7 @@ Generating synthetic datasets to improve inference on all sorts of computer-visi
 * [Blender](https://www.blender.org/) (v3.0.1 or later)
 
 ## WIP
+
+
+### Next up: 
+> [**03 Bringing 3D_models into Unreal**](03_Bringing_3D_models_into_Unreal_guide.md)
