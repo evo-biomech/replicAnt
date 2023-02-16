@@ -20,6 +20,12 @@ the ideal low-cost source for high resolution 3D models of arthropods.
 Alternatively, visit [Sketchfab](https://sketchfab.com/EvoBiomech/models) - perhaps, someone just happens to have
 uploaded a 3D model of your species in question.
 
+***
+### NOTE
+If your desired 3D model already has **< 20,000** polygons, you may be able to skip this step and proceed with the 
+[rigging guide](02_Rigging_3D_models.md). 
+***
+
 ### Important Blender **shortcuts** to make your life easier:
 
 Now for the most important shortcuts to make interacting with blender easier.
