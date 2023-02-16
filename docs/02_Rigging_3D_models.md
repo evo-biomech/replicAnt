@@ -88,8 +88,71 @@ Navigate to the **Objects** folder, select the **Armature** and import it.
 
 ![](../images/rig_03.PNG)
 
+The **Armature** should now be loaded into your scene at the **world origin**.
+Next, select the **Armature** and switch into **Edit Mode** to begin moving the set of virtual bones into their desired 
+location on the model.
 
-#### WIP
+![](../images/rig_04.PNG)
+
+Now (in **Edit Mode**), select the entire **Armature** (with **A**) and move it upwards to roughly align with the centre
+of your model.
+
+![](../images/rig_05.PNG)
+
+Next, we activate **Snap To** > **Volume** so that the joints we move automatically snap to the centre of the 
+surrounding mesh. Make sure to also select **Snap With** > **Center**, as the default is **Closest**.
+
+Furthermore, make sure "X mirror" is turned off while editing. Otherwise, any adjustment you make will affect the
+respective joints (left and right) on both sides of the Armature.
+
+![](../images/rig_06_clean.PNG)
+
+Now, one by one, select each joint and move it to their desired locations. Refer to our reference figures below:
+
+> #### NOTE:
+> Take your time with the placement of joints. The more accurately you assign them in your model, the more realistic the
+resulting poses can be. You can always go back and refine their position, but you may have to repeat the **weight 
+painting** process detailed below
+
+<img src=figures/rig_layout_dark.png#gh-dark-mode-only >
+<img src=figures/rig_layout_bright.png#gh-light-mode-only > 
+
+(*Joint naming convention details*)
+
+![](../images/rig_06_top.PNG)
+(*top-down view of the assigned Armature*)
+
+![](../images/rig_07_side.PNG)
+(*side view of the assigned Armature*)
+
+![](../images/rig_08_close.PNG)
+(*Close-up of the end configuration of each leg. As the generator reports back only the location of the
+**base** of each bone, the tail end of every chain of bones may lie outside the model*)
+
+After you have completed the joint placement process, we can now **parent** the 3D model (mesh) to the
+**Armature**. 
+
+First, select the 3D model, then, while holding **SHIFT**, select the **Armature**.
+
+Now, press **CTRL + P** and select **Armature Deform** > **With Automatic Weights**.
+
+![](../images/rig_09.PNG)
+
+Finally, select your 3D model and switch into **Weight Painting** mode. On the right side open the **Vertex Group**
+panel and, one by one, check that every virtual **bone** only affects the desired area. If it also affects adjacent
+areas of the mesh, use the **Add** and **Subtract** brushes to paint in the areas correctly. Be very diligent
+with this final step, as otherwise your model will not deform correctly when being used inside the generator.
+
+![](../images/rig_10.PNG)
+
+Be very diligent with this final step, as otherwise your model will not deform correctly when being used inside the 
+generator.
+
+When you are done, select the **Armature** and switch into **Pose Mode** to ensure all joints behave as expected and only
+affect the desired areas of the mesh!
+
+![](../images/rig_11.gif)
+
 
 ### Next up:
 
