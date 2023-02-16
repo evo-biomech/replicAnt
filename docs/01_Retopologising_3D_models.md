@@ -223,10 +223,18 @@ Remember to save the generated **Normal** texture to your drive as well!
 Now you should have generated the **colour** (or albedo) and **normal** map for your
 retolopogised model:
 
-| ![](../images/clean_up_21a.PNG) | ![](../images/clean_up_23b.PNG) |
-| **colour** (or albedo) map | **normal** map |
+<table style="padding:10px">
+  <tr> 
+   <td><img src="../images/clean_up_21a.PNG" alt="color"  width = 300px height = 300px></td>
+   <td><img src="../images/clean_up_23b.PNG" alt="normal" width = 300px height = 300px></td>
+    
+  </tr>
+</table>
+
 
 ![](../images/clean_up_24_rig_01.png)
+
+( rendered retogologised model with wireframe overlay )
 
 
 ### Next up: 
