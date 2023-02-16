@@ -120,12 +120,15 @@ painting** process detailed below
 (*Joint naming convention details*)
 
 ![](../images/rig_06_top.PNG)
+
 (*top-down view of the assigned Armature*)
 
 ![](../images/rig_07_side.PNG)
+
 (*side view of the assigned Armature*)
 
 ![](../images/rig_08_close.PNG)
+
 (*Close-up of the end configuration of each leg. As the generator reports back only the location of the
 **base** of each bone, the tail end of every chain of bones may lie outside the model*)
 
