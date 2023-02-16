@@ -225,9 +225,12 @@ retolopogised model:
 
 <table style="padding:10px">
   <tr> 
-   <td><img src="../images/clean_up_21a.PNG" alt="color"  width = 300px height = 300px></td>
-   <td><img src="../images/clean_up_23b.PNG" alt="normal" width = 300px height = 300px></td>
-    
+   <td><img src="../images/clean_up_21a.PNG" alt="color"  width = 300px ></td>
+   <td><img src="../images/clean_up_23b.PNG" alt="normal" width = 300px ></td>
+  </tr>
+  <tr> 
+   <td>colour (or albedo) map</td>
+   <td>normal map</td>
   </tr>
 </table>
 
