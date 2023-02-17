@@ -13,3 +13,5 @@ UE5_parsers/.ipynb_checkpoints/*
 # external files
 Content/Internal/MaterialGeneration/Materials/
 Content/Megascans/
+Content/Subjects/
+Content/HDRI/
