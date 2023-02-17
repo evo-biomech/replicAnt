@@ -121,19 +121,23 @@ Refer to the [**Troubleshooting guide**](troubleshooting.md) for additional guid
 
 ![](../images/26_the_child.PNG)
 
-7. Rename the **Child Blue Print Class** to something more fitting of the newly added mesh so we can find it when we want to select it inside the generator. Then open the file. In there, select the **Insect_SkeletalMesh** on the left side and then make the following changes on the right side:
+7. Rename the **Child Blue Print Class** to something more fitting of the newly added mesh so we can find it when we want to select it inside the generator. Then open the file. Now, provide a "Class name" which is how your subject model will be referred to in the generated **Batch Data File**.
+
+![](../images/27_the_blueprint_a.PNG)
+
+8. Click on **Open Full Blueprint Editor**. In there, select the **Insect_SkeletalMesh** on the left side and then make the following changes on the right side:
 
 * for the **Anim Class**, select **ABP_InsectBase_C**
 * for the **Skeletal Mesh**, select your newly imported skeletal mesh
 * for the **Materials > Element 0**, select the created **Material Instance** (not the original material, as otherwise the generator cannot apply variations to it at runtime)
 
-![](../images/27_the_blueprint.PNG)
+![](../images/27_the_blueprint_b.PNG)
 
-8. Select your new mewly created **Child Blue Print Class** as part of your **Colony** in the **FARTS_Interface**, under **Colony > Types**. You can also add additional subjects here, the sky is the limit. By pressing on **Spawn Preview Colony** you can see what your generated colony will look like. (You may need to move to the top of the generated world, where the **Colony Preview Groundplane** is located.
+9. Select your new mewly created **Child Blue Print Class** as part of your **Colony** in the **FARTS_Interface**, under **Colony > Types**. You can also add additional subjects here, the sky is the limit. By pressing on **Spawn Preview Colony** you can see what your generated colony will look like. (You may need to move to the top of the generated world, where the **Colony Preview Groundplane** is located.
 
 ![](../images/28_the_colony.PNG)
 
-9. **You did it!**  (well, hopefully) 
+10. **You did it!**  (well, hopefully) 
 
 If everything has gone according to plan, you should now be able to hit **Generate** and watch the magic happen. 
 In the [next section](04_Generating_your_first_dataset.md), we will detail what each of the generator parameters does.
