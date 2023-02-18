@@ -80,6 +80,17 @@ After a specified time, the OS bug-checks the computer with the code VIDEO_TDR_F
       ValueType : REG_DWORD
       ValueData : Number of seconds to leave the driver. The default value is 5 seconds.
 
+### 1.4 Disabling background tools influencing GPU performance
+
+If you experience frequent crashes without an apparent source of error, try uninstalling (or temporarily deactivating) 
+any tools that may check on GPU usage or influence clock-speed, memory usage, etc.
+> **Common culprits are**:
+> * TechPowerUp GPU-Z
+> * MSI Afterburner
+> 
+> (_**NOTE**: This list is (very likely) not complete. If you find further applications that influence the
+> generator performance, please raise an **issue** and let us know, so we can expand this list!_)
+
 
 ## 2. "root" bone in armature prevents assigning skeletal mesh
 
