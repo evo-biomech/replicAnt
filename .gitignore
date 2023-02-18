@@ -15,3 +15,7 @@ Content/Internal/MaterialGeneration/Materials/
 Content/Megascans/
 Content/Subjects/
 Content/HDRI/
+Temp Content
+
+# excluding test environments
+Content/Generator_config/Generator_example_PLANTS
