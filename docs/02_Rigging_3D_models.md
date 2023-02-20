@@ -143,8 +143,7 @@ Now, press **CTRL + P** and select **Armature Deform** > **With Automatic Weight
 
 Finally, select your 3D model and switch into **Weight Painting** mode. On the right side open the **Vertex Group**
 panel and, one by one, check that every virtual **bone** only affects the desired area. If it also affects adjacent
-areas of the mesh, use the **Add** and **Subtract** brushes to paint in the areas correctly. Be very diligent
-with this final step, as otherwise your model will not deform correctly when being used inside the generator.
+areas of the mesh, use the **Add** and **Subtract** brushes to paint in the areas correctly.
 
 ![](../images/rig_10.PNG)
 

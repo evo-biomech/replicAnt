@@ -46,7 +46,7 @@ Time to prepare a model in Blender to send over and configure for generating som
 
 ## Preparing models in Blender for Unreal
 
-Generally, the lower the vertex count, while still appearing realistic, the better. Unreal engine deals very well with reidiculous numbers of polygons, but simulating hundreds of high resolution insects can still be a challenging task for your machine. 
+Generally, the lower the vertex count, while still appearing realistic, the better. Unreal engine deals very well with ridiculous numbers of polygons, but simulating hundreds of high resolution insects can still be a challenging task for your machine. 
 Aim for >20,000 triangles inside your model, and you are good. For details, refer to our [**01 Retopologising 3D models guide**](01_Retopologising_3D_models.md).
 
 To make use of our provided animation blueprints, follow our [standard rigging convention](../example_data/base_rig.blend),
