@@ -201,6 +201,10 @@ please cite some of the following:
         year = {2022}
         }
 
+## Notes
+
+* testing squashed branch
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
