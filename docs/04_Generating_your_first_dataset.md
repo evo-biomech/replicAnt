@@ -84,6 +84,7 @@ The **FARTS Interface** consists of four separate tabs, each to configure a diff
     * ```Compression Quality ``` - Fixed percentage output compression of the **Final Color** Pass. All other passes 
     remain unaffected and will be writen out as uncompressed **.png** files.
     * ```Export JSON Data``` - Export the data (annotation) file. 
+    
       > **NOTE**: In all our provided examples **data (annotation) files** are required.
   
     ![](../images/first_dataset_03_spaced.png)
@@ -150,7 +151,8 @@ The **Debug** tab can be used to set the randomisation seed and add delays to th
   the batch data file.
 * **Seed**
   * ```Seed``` - Explicitly set the Seed to repeatedly produce the same variation.
-    > **NOTE** : changing the colony size, ground tesselation, or scattered assets will result in different
+    
+      > **NOTE** : changing the colony size, ground tesselation, or scattered assets will result in different
       output appearances, even with the same seed as it cannot be guaranteed that the same camera poses can
       be assumed.
 * **Debug**
