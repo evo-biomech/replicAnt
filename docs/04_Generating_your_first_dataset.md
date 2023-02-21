@@ -70,7 +70,7 @@ The **FARTS Interface** consists of four separate tabs, each to configure a diff
     
       > **NOTE** : *The **ground plane** is the lowest hierarchical level, meaning all elements placed on top of it will 
   also be regenerated every time it is updated. The scattered assets in turn influence the placement of the subjects of 
-  colony. Therefore, the lower in this list the element appears, the more frequently (corresponding to lower values) it 
+  colony. Therefore, the lower in this list the element appears, the more seldomly (corresponding to lower values) it 
   should be updated to be computationally efficient. As all materials and the camera placement and parameters are 
   updated at every iteration, high variability can be achieved even with infrequent updates of **ground plane** and 
   **scatterers**.*
