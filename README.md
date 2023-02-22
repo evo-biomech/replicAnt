@@ -127,11 +127,11 @@ Download and unpack the files into the **Content** directory of the FARTS projec
 
 ![](images/05_external_files.png)
 
-3. Launch **FARTS.uproject** by double clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. If this is the case you can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases). 
+3. Launch **FARTS.uproject** by double-clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. If this is the case you can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases). 
 
 ![](images/06_launch.png)
 
-4. In the content browser, right click on the file named **FARTS_Interface** and select **Run Editor Utility Widget**.
+4. In the content browser, right-click on the file named **FARTS_Interface** and select **Run Editor Utility Widget**.
 
 ![](images/07_add_FARTS_interface.PNG)
 
@@ -139,9 +139,19 @@ Now, you should be able to see the FARTS interface on the left side of your scre
 
 ![](images/08_show_FARTS_interface.PNG)
 
-In theory, you can now start generating your first datasets right away (if you are planning on only using the provided subject models). In case you want to bring your own insect models into the generator follow the ["3D model to dataset" guide](docs/03_Bringing_3D_models_into_Unreal_guide.md).
+In theory, you can now start [generating your first datasets](docs/04_Generating_your_first_dataset.md) right away 
+(if you are planning on only using the provided subject models). 
 
-***
+In case you want to bring your own (insect) models into the generator follow our detailed guides:
+
+> * [**01** Retopologising 3D models](docs/01_Retopologising_3D_models.md)
+> * [**02** Rigging 3D models](docs/02_Rigging_3D_models.md)
+> * [**03** Bringing 3D models into Unreal](docs/03_Bringing_3D_models_into_Unreal_guide.md)
+> * [**04** Generating your first dataset](docs/04_Generating_your_first_dataset.md)
+> * [**05** Adding custom assets and scatterers](docs/05_Adding_custom_assets_and_scatterers.md)
+
+***More guides on advanced usage and customisation will follow soon!***
+
 ## Notes and Resources
 
 ### External files
@@ -198,7 +208,7 @@ please cite some of the following:
         author = {Plum, Fabian},
         resource = {GitHub repository},
         howpublished = {https://github.com/FabianPlum/OmniTrax},
-        year = {2022}
+        year = {2023}
         }
 
 ## Contributing
