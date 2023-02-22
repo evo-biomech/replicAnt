@@ -159,3 +159,12 @@ affect the desired areas of the mesh!
 ### Next up:
 
 > [**03 Bringing 3D_models into Unreal**](03_Bringing_3D_models_into_Unreal_guide.md)
+
+___
+
+> In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
+> **issue** on the FARTS GitHub page.
+ 
+## License
+© Fabian Plum, Rene Bulla, David Labonte 2023
+[MIT License](https://choosealicense.com/licenses/mit/)

@@ -40,3 +40,14 @@ If you do not wish to install the pre-configured environment, here are the depen
   - pathlib
   - imutils
   - scikit-learn
+
+
+
+___
+
+> In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
+> **issue** on the FARTS GitHub page.
+ 
+## License
+© Fabian Plum, Rene Bulla, David Labonte 2023
+[MIT License](https://choosealicense.com/licenses/mit/)

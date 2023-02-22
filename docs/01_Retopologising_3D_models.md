@@ -248,3 +248,12 @@ retolopogised model:
 
 ### Next up: 
 > [**02 Rigging 3D models**](02_Rigging_3D_models.md)
+
+___
+
+> In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
+> **issue** on the FARTS GitHub page.
+ 
+## License
+© Fabian Plum, Rene Bulla, David Labonte 2023
+[MIT License](https://choosealicense.com/licenses/mit/)

@@ -146,3 +146,12 @@ In the [next section](04_Generating_your_first_dataset.md), we will detail what 
 
 ### Next up: 
 > [**04 Generating your first dataset**](04_Generating_your_first_dataset.md)
+
+___
+
+> In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
+> **issue** on the FARTS GitHub page.
+ 
+## License
+© Fabian Plum, Rene Bulla, David Labonte 2023
+[MIT License](https://choosealicense.com/licenses/mit/)

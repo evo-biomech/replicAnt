@@ -188,3 +188,12 @@ specialised for a large variety of deep learning-based computer vision applicati
 ### Next up:
 
 > [**05 Adding custom assets and scatterers**](05_Adding_custom_assets_and_scatterers.md)
+
+___
+
+> In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
+> **issue** on the FARTS GitHub page.
+ 
+## License
+© Fabian Plum, Rene Bulla, David Labonte 2023
+[MIT License](https://choosealicense.com/licenses/mit/)

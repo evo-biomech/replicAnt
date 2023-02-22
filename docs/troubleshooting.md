@@ -92,6 +92,15 @@ any tools that may check on GPU usage or influence clock-speed, memory usage, et
 > generator performance, please raise an **issue** and let us know, so we can expand this list!_)
 
 
+---
+
+### Found a Fix? Let us know!
+> **If you discover further methods to counter frequent crashes, please raise an issue to let us know, so we can add your
+discoveries to our troubleshooting guide!**
+
+---
+
+
 ## 2. "root" bone in armature prevents assigning skeletal mesh
 
 As of **Blender 2.93.2**, the following solution which allows you to use ANY name for your armature and export without
@@ -127,3 +136,12 @@ Source: [Prevent Blender FBX Exporter adding extra root bone](https://forums.unr
 
 7. Save the “export_fbx_bin.py” file in Notepad++ or your editor.
 8. Restart Blender.
+
+___
+
+> In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
+> **issue** on the FARTS GitHub page.
+ 
+## License
+© Fabian Plum, Rene Bulla, David Labonte 2023
+[MIT License](https://choosealicense.com/licenses/mit/)
