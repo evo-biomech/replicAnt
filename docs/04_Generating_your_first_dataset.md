@@ -1,8 +1,7 @@
-# FARTS
-
+# replicAnt
 **F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
 
-![](../images/06_launch.png)
+![](../images/06_launch_new.png)
 
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve
 insects. Like, lots of them.
@@ -27,9 +26,9 @@ used to train a variety of networks through the use of our provided [data parser
 
 ## Basic configuration
 
-Most functionality required to produce training datasets using FARTS is exposed through the **FARTS Interface**.
+Most functionality required to produce training datasets using replicAnt is exposed through the **FARTS Interface**.
 
-First, open the [**FARTS.uproject**](../FARTS.uproject) file.
+First, open the [**replicAnt.uproject**](../replicAnt.uproject) file.
 Then, simply **double-click** on one of the **.umap** example files under **/Content/Generator_config**.
 
 ### The FARTS Interface
@@ -192,7 +191,7 @@ specialised for a large variety of deep learning-based computer vision applicati
 ___
 
 > In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
-> **issue** on the FARTS GitHub page.
+> **issue** on the replicAnt GitHub page.
  
 ## License
 © Fabian Plum, Rene Bulla, David Labonte 2023

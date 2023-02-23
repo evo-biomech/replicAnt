@@ -1,7 +1,7 @@
-# FARTS
+# replicAnt
 **F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
 
-![](../images/06_launch.png)
+![](../images/06_launch_new.png)
 
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
 
@@ -79,7 +79,7 @@ Install the **Quixel Bridge** Plugin for your version of **Unreal Engine**.
 
 ![](../images/asset_scatterers_quixel_bridge_03.PNG)
 
-Then open the **FARTS.uproject** file again.
+Then open the **replicAnt.uproject** file again.
 
 Now, you can import assets directly from the **Quixel Megascans** library, either via the top bar...
 
@@ -129,7 +129,7 @@ ___
 ___
 
 > In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
-> **issue** on the FARTS GitHub page.
+> **issue** on the replicAnt GitHub page.
  
 ## License
 © Fabian Plum, Rene Bulla, David Labonte 2023

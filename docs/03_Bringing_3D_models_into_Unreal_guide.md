@@ -1,7 +1,7 @@
-# FARTS
+# replicAnt
 **F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
 
-![](../images/06_launch.png)
+![](../images/06_launch_new.png)
 
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
 
@@ -33,7 +33,7 @@ Generating synthetic datasets to improve inference on all sorts of computer-visi
 
 ![](../images/14_send2ue_collection.PNG)
 
-6. If you haven't done that already, launch **FARTS.uproject** by double clicking on the file. We need to check whether Unreal has the right plugins enabled to receive data from our Blender instance. Click on **Settings** (top left) and then on **Plugins**.
+6. If you haven't done that already, launch **replicAnt.uproject** by double clicking on the file. We need to check whether Unreal has the right plugins enabled to receive data from our Blender instance. Click on **Settings** (top left) and then on **Plugins**.
 
 ![](../images/15_ue_plugins.PNG)
 
@@ -150,7 +150,7 @@ In the [next section](04_Generating_your_first_dataset.md), we will detail what 
 ___
 
 > In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
-> **issue** on the FARTS GitHub page.
+> **issue** on the replicAnt GitHub page.
  
 ## License
 © Fabian Plum, Rene Bulla, David Labonte 2023

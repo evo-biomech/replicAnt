@@ -1,8 +1,7 @@
-# FARTS
-
+# replicAnt
 **F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
 
-![](../images/06_launch.png)
+![](../images/06_launch_new.png)
 
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve
 insects. Like, lots of them.
@@ -163,7 +162,7 @@ affect the desired areas of the mesh!
 ___
 
 > In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
-> **issue** on the FARTS GitHub page.
+> **issue** on the replicAnt GitHub page.
  
 ## License
 © Fabian Plum, Rene Bulla, David Labonte 2023

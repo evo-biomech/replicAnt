@@ -1,10 +1,10 @@
-# FARTS.yml
+# cona_replicAnt.yml
 
-# FARTS - Fabi And René's Training-data Synthesizer
+# replicAnt - Fabi And René's Training-data Synthesizer
 # © Fabian Plum, René Bulla 2023
 # MIT License
 
-name: FARTS
+name: replicAnt
 channels:
   - conda-forge
 dependencies:

@@ -1,7 +1,7 @@
 # FARTS
 **F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
 
-![](../images/06_launch.png)
+![](../images/06_launch_new.png)
 
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
 
@@ -24,7 +24,7 @@ conda env create -f conda_FARTS.yml
 After the environment has been created successfully, re-start the terminal, and run the following line to activate the environment, and to continue the installation.
 
  ```bash
-conda activate FARTS
+conda activate replicAnt
 ```
 
 If you do not wish to install the pre-configured environment, here are the dependencies:
@@ -46,7 +46,7 @@ If you do not wish to install the pre-configured environment, here are the depen
 ___
 
 > In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
-> **issue** on the FARTS GitHub page.
+> **issue** on the replicAnt GitHub page.
  
 ## License
 © Fabian Plum, Rene Bulla, David Labonte 2023

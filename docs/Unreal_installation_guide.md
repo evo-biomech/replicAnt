@@ -1,7 +1,7 @@
-# FARTS
+# replicAnt
 **F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
 
-![](../images/06_launch.png)
+![](../images/06_launch_new.png)
 
 Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
 
@@ -31,7 +31,7 @@ Generating synthetic datasets to improve inference on all sorts of computer-visi
 
 ![](../images/01_epic_unreal.PNG)
 
-Now, click on **Library** and click on the **+** icon to install a new version of Unreal Engine. As we built FARTS on Unreal Engine 5, select the latest Unreal Engine 5 release, and follow the installation guide. 
+Now, click on **Library** and click on the **+** icon to install a new version of Unreal Engine. As we built replicAnt on Unreal Engine 5, select the latest Unreal Engine 5 release, and follow the installation guide. 
 
 Unless you are planning on running extensive debugging or further development, only selecting **core components** should be sufficient. All additionally required functionality is provided in our project environment and, alternatively, can be installed later on.
 
@@ -49,41 +49,41 @@ If all has gone well, you should be able to see on your GitHub profile that you 
 
 5.	Once the **Unreal Engine** installation has completed in the background, restart your computer. Afterwards, we’ll set up the project.
 
-###Setting up the FARTS project
-1.	If you have not done so already, clone the FARTS repository to your computer. The total project size will be ~5GB, including 3D assets and materials to populate the procedurally generated world.
+###Setting up the replicAnt project
+1.	If you have not done so already, clone the replicAnt repository to your computer. The total project size will be ~5GB, including 3D assets and materials to populate the procedurally generated world.
 
 ```bash
-git clone https://github.com/FabianPlum/FARTS
+git clone https://github.com/FabianPlum/replicAnt
 ``` 
 
 This will take a while. There are a lot of files to be copied.
 
 2.	Once the download has finished, you will next need to download all additional assets (3D meshes and materials) we have provided externally. NOTE: This project is running under a non-commercial license and any assets used for the generation of synthetic datasets may not be used or re-distributed for commercial purposes.
 
-[Download FARTS external content files]( https://drive.google.com/file/d/1FiboPJmrhqv6cDB2Ara-2n3-yDdHg0sh/view?usp=sharing)
+[Download replicAnt external content files]( https://drive.google.com/file/d/1FiboPJmrhqv6cDB2Ara-2n3-yDdHg0sh/view?usp=sharing)
 
-Download and unpack the files into the **Content** directory of the FARTS project.
+Download and unpack the files into the **Content** directory of the replicAnt project.
 
 ![](../images/05_external_files.png)
 
-3. Launch **FARTS.uproject** by double-clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. If this is the case you can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases). 
+3. Launch **replicAnt.uproject** by double-clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. If this is the case you can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases). 
 
 ![](../images/06_launch.png)
 
 4. In the content browser, right-click on the file named **FARTS_Interface** and select **Run Editor Utility Widget**.
 
-![](../images/07_add_FARTS_interface.PNG)
+![](../images/07_add_replicAnt_interface.PNG)
 
 Now, you should be able to see the FARTS interface on the left side of your screen, where you can configure everything part of the generator, from file types and simulated colonies, to adding further animals, and controlling the generator seed for benchmarking and debugging purposes.
 
-![](../images/08_show_FARTS_interface.PNG)
+![](../images/08_show_replicAnt_interface.PNG)
 
 In theory, you can now start generating your first datasets right away (if you are planning on only using the provided insect models). In case you want to bring your own insect models into the generator follow the [3D model to dataset guide](03_Bringing_3D_models_into_Unreal_guide.md).
 
 ___
 
 > In case you encounter any problems, consult our [troubleshooting guide](troubleshooting.md), or consider raising an
-> **issue** on the FARTS GitHub page.
+> **issue** on the replicAnt GitHub page.
  
 ## License
 © Fabian Plum, Rene Bulla, David Labonte 2023
