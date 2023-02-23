@@ -1,7 +1,8 @@
-# FARTS
-**F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
+# replicAnt
+___
+aka - ***F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer*
 
-![](images/06_launch.png)
+![](images/06_launch_new.png)
 
 _Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them._
 
@@ -9,8 +10,8 @@ _Generating synthetic datasets to improve inference on all sorts of computer-vis
 <img src=docs/figures/Fig_1_dark.png#gh-dark-mode-only >
 <img src=docs/figures/Fig_1_bright.png#gh-light-mode-only > 
 
-**FARTS** produces procedurally generated and richly annotated image samples from 3D models of arthropod specimens, 
-which form the basis of a wide range of computer vision applications. (**a**) The input to the FARTS pipeline are 
+**replicAnt** produces procedurally generated and richly annotated image samples from 3D models of arthropod specimens, 
+which form the basis of a wide range of computer vision applications. (**a**) The input to the replicAnt pipeline are 
 digital 3D models, which we generated with the [open-source photogrammetry platform - scAnt](https://github.com/evo-biomech/scAnt). 
 Each model comprises a (**b**) textured mesh, (**c**) an armature which provides control over animal pose, and 
 (**d**) a low-polygonal collision mesh to control the interaction of the model with objects in its environment. 
@@ -54,13 +55,13 @@ use a custom python installation / environment:
 
 ```bash
 cd conda_environment
-conda env create -f conda_FARTS.yml
+conda env create -f conda_replicAnt.yml
 ```
 
 After the environment has been created successfully, re-start the terminal, and run the following line to activate the environment, and to continue the installation.
 
  ```bash
-conda activate FARTS
+conda activate replicAnt
 ```
 
 If you do not wish to install the pre-configured environment, here are the dependencies:
@@ -92,7 +93,7 @@ If you do not wish to install the pre-configured environment, here are the depen
 
 ![](images/01_epic_unreal.PNG)
 
-Now, click on **Library** and click on the **+** icon to install a new version of Unreal Engine. As we built FARTS on Unreal Engine 5, select the latest Unreal Engine 5 release, and follow the installation guide. 
+Now, click on **Library** and click on the **+** icon to install a new version of Unreal Engine. As we built replicAnt on Unreal Engine 5, select the latest Unreal Engine 5 release, and follow the installation guide. 
 
 Unless you are planning on running extensive debugging or further development, only selecting **core components** should be sufficient. All additionally required functionality is provided in our project environment and, alternatively, can be installed later on.
 
@@ -110,34 +111,34 @@ If all has gone well, you should be able to see on your GitHub profile that you 
 
 5.	Once the **Unreal Engine** installation has completed in the background, restart your computer. Afterwards, we’ll set up the project.
 
-### Setting up the FARTS project
-1.	If you have not done so already, clone the FARTS repository to your computer. The total project size will be ~5GB, including 3D assets and materials to populate the procedurally generated world.
+### Setting up the replicAnt project
+1.	If you have not done so already, clone the replicAnt repository to your computer. The total project size will be ~5GB, including 3D assets and materials to populate the procedurally generated world.
 
 ```bash
-git clone https://github.com/FabianPlum/FARTS
+git clone https://github.com/FabianPlum/replicAnt
 ``` 
 
 This will take a while. There are a lot of files to be copied.
 
 2.	Once the download has finished, you will next need to download all additional assets (3D meshes and materials) we have provided externally. NOTE: This project is running under a non-commercial license and any assets used for the generation of synthetic datasets may not be used or re-distributed for commercial purposes.
 
-[Download FARTS external content files]( https://drive.google.com/file/d/1FiboPJmrhqv6cDB2Ara-2n3-yDdHg0sh/view?usp=sharing)
+[Download replicAnt external content files]( https://drive.google.com/file/d/1FiboPJmrhqv6cDB2Ara-2n3-yDdHg0sh/view?usp=sharing)
 
-Download and unpack the files into the **Content** directory of the FARTS project.
+Download and unpack the files into the **Content** directory of the replicAnt project.
 
 ![](images/05_external_files.png)
 
-3. Launch **FARTS.uproject** by double-clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. If this is the case you can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases). 
+3. Launch **replicAnt.uproject** by double-clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. If this is the case you can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases). 
 
 ![](images/06_launch.png)
 
-4. In the content browser, right-click on the file named **FARTS_Interface** and select **Run Editor Utility Widget**.
+4. In the content browser, right-click on the file named **replicAnt_Interface** and select **Run Editor Utility Widget**.
 
-![](images/07_add_FARTS_interface.PNG)
+![](images/07_add_replicAnt_interface.PNG)
 
-Now, you should be able to see the FARTS interface on the left side of your screen, where you can configure everything part of the generator, from file types and simulated colonies, to adding further animals, and controlling the generator seed for benchmarking and debugging purposes.
+Now, you should be able to see the replicAnt interface on the left side of your screen, where you can configure everything part of the generator, from file types and simulated colonies, to adding further animals, and controlling the generator seed for benchmarking and debugging purposes.
 
-![](images/08_show_FARTS_interface.PNG)
+![](images/08_show_replicAnt_interface.PNG)
 
 In theory, you can now start [generating your first datasets](docs/04_Generating_your_first_dataset.md) right away 
 (if you are planning on only using the provided subject models). 
@@ -170,7 +171,7 @@ The following subject models are currently available:
 
 ### Troubleshooting
 
-The **FARTS** pipeline comprises many moving parts and experimental software tools, so it is only natural for
+The **replicAnt** pipeline comprises many moving parts and experimental software tools, so it is only natural for
 new additions to the pipeline (or updates on the side of Unreal and Blender) to cause minor hiccups.
 Therefore, we have compiled a list of common issues and fow to fix them:
 
@@ -181,7 +182,7 @@ to open an issue, using to our [**bug report template**](.github/ISSUE_TEMPLATE/
 
 ### References
 
-When using **FARTS** and/or our other fun projects in your work, 
+When using **replicAnt** and/or our other fun projects in your work, 
 please cite some of the following:
 
     @article{PlumLabonte2021,
@@ -204,8 +205,8 @@ please cite some of the following:
         }
 
     @misc{Plumetal2023,
-        title = {FARTS},
-        author = {Plum, Fabian},
+        title = {replicAnt},
+        author = {Plum, Fabian; Bulla, Rene; Beck, Hendrik; Imirzian, Natalie; David, Labonte},
         resource = {GitHub repository},
         howpublished = {https://github.com/FabianPlum/OmniTrax},
         year = {2023}
