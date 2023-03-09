@@ -1,10 +1,18 @@
-# replicAnt
+# *replicAnt*
+
+"a synthetic data-driven deep learning approach to animal behavioural research"
+
+by [Fabian **Plum**](https://twitter.com/fabian_plum), 
+[René **Bulla**](https://twitter.com/renebulla), 
+[Hendrik **Beck**](https://twitter.com/Hendrik_Beck), 
+[Natalie **Imirzian**](https://twitter.com/nimirzy), 
+and [David **Labonte**](https://twitter.com/EvoBiomech) (2023)
+
 ___
-aka - ***F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer*
 
 ![](images/06_launch_new.png)
 
-_Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them._
+***replicAnt*** - aka  ***F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer*
 
 ***
 <img src=docs/figures/Fig_1_dark.png#gh-dark-mode-only >
