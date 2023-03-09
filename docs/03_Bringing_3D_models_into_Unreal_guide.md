@@ -1,9 +1,18 @@
 # replicAnt
-**F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer
+
+"a synthetic data-driven deep learning approach to animal behavioural research"
+
+by [Fabian **Plum**](https://twitter.com/fabian_plum), 
+[René **Bulla**](https://twitter.com/renebulla), 
+[Hendrik **Beck**](https://twitter.com/Hendrik_Beck), 
+[Natalie **Imirzian**](https://twitter.com/nimirzy), 
+and [David **Labonte**](https://twitter.com/EvoBiomech) (2023)
+
+___
 
 ![](../images/06_launch_new.png)
 
-Generating synthetic datasets to improve inference on all sorts of computer-vision tasks that specifically involve insects. Like, lots of them.
+___
 
 ## Brining 3D models into Unreal (Blender to Unreal)
 

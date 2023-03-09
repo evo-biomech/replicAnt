@@ -1,4 +1,4 @@
-# *replicAnt*
+# replicAnt
 
 "a synthetic data-driven deep learning approach to animal behavioural research"
 
