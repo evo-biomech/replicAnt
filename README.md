@@ -1,6 +1,6 @@
 # replicAnt
 
-"a synthetic data-driven deep learning approach to animal behavioural research"
+"a synthetic data-driven approach to animal behavioural research"
 
 by [Fabian **Plum**](https://twitter.com/fabian_plum), 
 [René **Bulla**](https://twitter.com/renebulla), 
