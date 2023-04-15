@@ -44,7 +44,7 @@ and [3D](UE5_parsers/Generate_Custom_3D_Dataset.ipynb) pose estimation,
 * ~ 50 GB of disk space (the faster the better)
   * Unreal engine itself will occupy roughly 30 GB
   * Another ~5GB are required for the complete project including 3D assets and materials
-  *	As a rough guide, 10k sample dataset at 2k resolution require ~5 GB (wassuming all pass types are required)
+  *	As a rough guide, 10k sample dataset at 2k resolution require ~5 GB (assuming all pass types are required)
 *	Dedicated GPU with 6GB VRAM (currently only tested on NVIDIA GPUs)
 *	16 GB RAM
 
