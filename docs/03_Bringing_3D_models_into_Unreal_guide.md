@@ -20,17 +20,17 @@ ___
 * [Blender](https://www.blender.org/) (v3.0.1 or later)
 * [send2unreal](https://github.com/EpicGames/BlenderTools) (v2.1 or later)
 *	Unreal engine (installed via Epic Games Launcher, see above, v5.0.2 or later)
-*	*Patience.*
+*	*Patience.* (lots, where available)
 
 1. download [send2unreal](https://github.com/EpicGames/BlenderTools) and don't unzip the file. You can install the addon in its zipped form straight from Blender. In Blender, under **edit/preferences/Add-ons** click on **Install...** and navigate to the **send2ue** zip file on your computer.
 
 ![](../images/10_install_Blender_plugin.PNG)
 
-2. You should now see a new top at the top of your Blender Window, named **Pipeline**. Click on it, and then select **Export/Settings_Dialog** to configure how we want things to be sent over to Unreal.
+2. You should now see a new top at the top of your Blender Window, aptly named **Pipeline**. Click on it, and then select **Export/Settings_Dialog** to configure how things are to be sent over to Unreal.
 
 ![](../images/11_config_send2ue.PNG)
 
-3. Inside the **Paths** tab, enter the desired location of your mesh / textures / armatures inside the Unreal project. In our case, this will be **Game/Subjects/NAME_OF_YOUR_SPECIMEN**. You will have to manually create the **NAME_OF_YOUR_SPECIMEN** folder inside the **Subjects** folder of the Unreal project, but this will make it possible to make changes to our model in Blender and simply send the updated version over to Unreal without having to set up everything again.
+3. Inside the **Paths** tab, enter the desired location of your mesh / textures / armatures inside the Unreal project. In our case, this will be **Game/Subjects/NAME_OF_YOUR_SPECIMEN**. You will have to manually create the **NAME_OF_YOUR_SPECIMEN** folder inside the **Subjects** folder of the Unreal project, but this will make it possible to make changes to our model in Blender and simply send the updated version over to Unreal without having to set up everything again. Worthwhile! 
 
 ![](../images/12_config_path.PNG)
 
@@ -38,11 +38,11 @@ ___
 
 ![](../images/13_config_export.PNG)
 
-5. If everything went according to plan, you should also be able to see an additional folder in your **Scene Collection** titled **Export**. Anything we place in here, Unreal will attempt to import, when we are ready to click on **Send to Unreal** (But don't do that now. We still have a few things to check first.)
+5. If everything went according to plan (well...), you should also be able to see an additional folder in your **Scene Collection** titled **Export**. Anything placed in here, Unreal will attempt to import, when **Send to Unreal** is clicked (But don't do that now. We still have a few things to check first.)
 
 ![](../images/14_send2ue_collection.PNG)
 
-6. If you haven't done that already, launch **replicAnt.uproject** by double clicking on the file. We need to check whether Unreal has the right plugins enabled to receive data from our Blender instance. Click on **Settings** (top left) and then on **Plugins**.
+6. If you haven't done so already, launch **replicAnt.uproject** by double clicking on the file. We need to check whether Unreal has the right plugins enabled to receive data from our Blender instance. Click on **Settings** (top left) and then on **Plugins**.
 
 ![](../images/15_ue_plugins.PNG)
 
@@ -50,13 +50,13 @@ ___
 
 ![](../images/16_ue_plugins_script.PNG)
 
-Nice one! Installation-wise we are done! 
-Time to prepare a model in Blender to send over and configure for generating some data!
+Nicely done - installation complete! 
+Time to prepare a model in Blender!
 
 ## Preparing models in Blender for Unreal
 
-Generally, the lower the vertex count, while still appearing realistic, the better. Unreal engine deals very well with ridiculous numbers of polygons, but simulating hundreds of high resolution insects can still be a challenging task for your machine. 
-Aim for >20,000 triangles inside your model, and you are good. For details, refer to our [**01 Retopologising 3D models guide**](01_Retopologising_3D_models.md).
+Generally, the lower the vertex count, the better, providing things still look reasonably realistic. Unreal engine deals very well with ridiculous numbers of polygons, but simulating hundreds of high resolution insects can still be a challenging task for your machine. 
+Aim for >20,000 triangles inside your model, and you should be retain a good relationship with your computer. For further details, refer to our [**01 Retopologising 3D models guide**](01_Retopologising_3D_models.md).
 
 To make use of our provided animation blueprints, follow our [standard rigging convention](../example_data/base_rig.blend),
 as detailed in the [**02 Rigging 3D models guide**](02_Rigging_3D_models.md).
@@ -88,7 +88,7 @@ This guide assumes that your model is already [**01 retopologised**](01_Retopolo
 
 *	[Optional] Create Normal maps. This can be done either in Blender directly by baking a normal map as an additional image texture (see texture baking), in Photoshop, or, nowadays it seems, in literally any image editing program… However, it’s best to do it directly in Blender to preserve information between unwrapped regions, which avoids sharp artifacts between islands in the unwrapped texture.
 
-5. Finally, in the **Scene Collection** move both your armature and your mesh into the **Export** collection. Now you can click on **Pipeline > Export > Send to Unreal**. Remember, your Unreal project needs to be open in order for this to work, and you must have created the specified folder referenced in the export settings (see step 3 of the installation guide above)
+5. Finally, in the **Scene Collection**, move both your armature and your mesh into the **Export** collection. Now you can click on **Pipeline > Export > Send to Unreal**. Remember, your Unreal project needs to be open in order for this to work, and you must have created the specified folder referenced in the export settings (see step 3 of the installation guide above)
 
 ![](../images/20_send2ue_export.PNG)
 
@@ -116,10 +116,10 @@ This guide assumes that your model is already [**01 retopologised**](01_Retopolo
 
 **Quick note:**
 
-In some cases, you will see an additional skeletal element listed here, named **root**, which may prevent assigning the
-skeleton correctly (If you proceed, the animation blueprints may no longer work correctly for this particular mesh).
+In some cases, you will see an additional skeletal element listed here, named **root**, which may prevent correct assignment of the
+skeleton (If you proceed, the animation blueprints may no longer work correctly for this particular mesh).
 
-Double-check (in Blender) whether your **Armature** follows the same naming convention as our [base_rig](../example_data/base_rig.blend).
+Double-check (in Blender) whether your **Armature** follows the same naming convention as our [base_rig](../example_data/base_rig.blend). It had better.
 Refer to the [**Troubleshooting guide**](troubleshooting.md) for additional guidance.
 
 5. Compute the low-poly collision mesh from the **Physics Asset** of your imported mesh. Open the **Physics Asset** and delete any hierarchy that is already present. Then, under Tools (right side) match the parameters shown in the image below and click on **Genrate All Bodies**.
@@ -130,7 +130,7 @@ Refer to the [**Troubleshooting guide**](troubleshooting.md) for additional guid
 
 ![](../images/26_the_child.PNG)
 
-7. Rename the **Child Blue Print Class** to something more fitting of the newly added mesh so we can find it when we want to select it inside the generator. Then open the file. Now, provide a "Class name" which is how your subject model will be referred to in the generated **Batch Data File**.
+7. Rename the **Child Blue Print Class** to something more fitting, so you can find it when you want to select it inside the generator. Then open the file. Next, provide a "Class name" which is how your subject model will be referred to in the generated **Batch Data File**.
 
 ![](../images/27_the_blueprint_a.PNG)
 
@@ -142,7 +142,7 @@ Refer to the [**Troubleshooting guide**](troubleshooting.md) for additional guid
 
 ![](../images/27_the_blueprint_b.PNG)
 
-9. Select your new mewly created **Child Blue Print Class** as part of your **Colony** in the **FARTS_Interface**, under **Colony > Types**. You can also add additional subjects here, the sky is the limit. By pressing on **Spawn Preview Colony** you can see what your generated colony will look like. (You may need to move to the top of the generated world, where the **Colony Preview Groundplane** is located.
+9. Select your new mewly created **Child Blue Print Class** as part of your **Colony** in the **FARTS_Interface**, under **Colony > Types**. You can also add additional subjects here - the sky (available computational power) is the limit. By pressing on **Spawn Preview Colony** you can see what the generated colony will look like. (You may need to move to the top of the generated world, where the **Colony Preview Groundplane** is located.
 
 ![](../images/28_the_colony.PNG)
 
