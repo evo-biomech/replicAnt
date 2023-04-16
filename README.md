@@ -1,9 +1,7 @@
 [![latest-release](https://img.shields.io/github/tag/evo-biomech/replicAnt.svg?label=version&style=flat)](https://github.com//evo-biomech/replicAnt/releases)
 [![license](https://img.shields.io/github/license/evo-biomech/replicAnt.svg?style=flat)](https://github.com//evo-biomech/replicAnt)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-
-Built with 
-![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
+![Unreal Engine](https://img.shields.io/badge/Made%20with-UNREAL%20ENGINE%205-%23313131.svg?&logo=unrealengine)
 
 # replicAnt
 
@@ -41,6 +39,10 @@ and [3D](UE5_parsers/Generate_Custom_3D_Dataset.ipynb) pose estimation,
 (**n**) and [semantic segmentation](UE5_parsers/Generate_mmlab_segmentation_Style_Dataset.ipynb).
 
 ***
+
+## Updates:
+
+* **16.04.2023** - Added first official [**release** version 1.0.0](https://github.com/evo-biomech/replicAnt/releases/tag/v1.0.0)
 
 ## Installation Guide
 ### Minimum system requirements:
@@ -122,13 +124,13 @@ If all has gone well (fingers crossed, but we all know what computers are like..
 5.	Once the **Unreal Engine** installation has completed in the background, restart your computer. Afterwards, we’ll set up the project.
 
 ### Setting up the replicAnt project
-1.	If you have not done so already, clone the replicAnt repository to your computer. The total project size will be ~5GB.
+1.	If you have not done so already, download the latest [replicAnt release](https://github.com//evo-biomech/replicAnt/releases) to your computer and unzip it.
+
+Alternatively, you can clone the full GitHub repository, in case you want to actively partake in further developement:
 
 ```bash
 git clone https://github.com/evo-biomech/replicAnt
 ``` 
-
-This will take a while. There are a lot of files to be copied. Make a cup of tea?
 
 2.	Once the download has finished, you will next need to download the curated set of assets (3D meshes and materials). NOTE: This project is running under a non-commercial license and any assets used for the generation of synthetic datasets may not be used or re-distributed for commercial purposes. It's all about the free stuff for everyone.
 
