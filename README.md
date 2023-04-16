@@ -1,3 +1,10 @@
+[![latest-release](https://img.shields.io/github/tag/evo-biomech/replicAnt.svg?label=version&style=flat)](https://github.com//evo-biomech/replicAnt/releases)
+[![license](https://img.shields.io/github/license/evo-biomech/replicAnt.svg?style=flat)](https://github.com//evo-biomech/replicAnt)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+
+Built with 
+![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)
+
 # replicAnt
 
 "a synthetic data-driven approach to animal behavioural research"
@@ -11,8 +18,6 @@ and [David **Labonte**](https://twitter.com/EvoBiomech) (2023)
 ___
 
 ![](images/06_launch_new.png)
-
-***replicAnt***
 
 ***
 <img src=docs/figures/Fig_1_dark.png#gh-dark-mode-only >
