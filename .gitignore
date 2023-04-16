@@ -16,5 +16,8 @@ Content/Internal/effects/
 Content/Megascans/
 Content/Subjects/
 Content/HDRI/
+
+# local files
 Intermediate/
 Saved/
+DerivedDataCache/
