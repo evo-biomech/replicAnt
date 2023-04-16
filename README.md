@@ -8,6 +8,8 @@ by [Fabian **Plum**](https://twitter.com/fabian_plum),
 [Natalie **Imirzian**](https://twitter.com/nimirzy), 
 and [David **Labonte**](https://twitter.com/EvoBiomech) (2023)
 
+FOR THE LATEST OFFICIAL VERSION HEAD OVER TO THE [EVO-BIOMECH replicAnt Fork](https://github.com/evo-biomech/replicAnt)!
+
 ___
 
 ![](images/06_launch_new.png)
