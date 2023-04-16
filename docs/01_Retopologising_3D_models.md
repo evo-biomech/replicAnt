@@ -10,11 +10,9 @@ and [David **Labonte**](https://twitter.com/EvoBiomech) (2023)
 
 ___
 
-![](../images/06_launch_new.png)
+![](../images/06_launch_better_together.png)
 
 ___
-
-***replicAnt***
 
 ## Retopologising 3D models (subjects)
 
