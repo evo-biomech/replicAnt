@@ -10,26 +10,23 @@ and [David **Labonte**](https://twitter.com/EvoBiomech) (2023)
 
 ___
 
-![](../images/06_launch_new.png)
+![](../images/06_launch_better_together.png)
 
 ___
-
-***replicAnt*** - aka  ***F**abi **A**nd **R**ené's **T**raining-data **S**ynthesizer*
 
 ## Retopologising 3D models (subjects)
 
 ### Requirements:
 * [Blender](https://www.blender.org/) (v3.0.1 or later)
-* A 3D model (of an arthropod) you wish to add to the generator
+* A 3D model (of whatever takes your fancy, but presumably an animal (hopefully an insect)!) you wish to add to the generator
 
-The key to great synthetic data are great 3D models.
-Here, we are going to assume that you already have a model you wish to use.
+Behind every great synthetic dataset stands a great 3D model.
+We will assume that you already have a model you wish to use.
 
-If you do not, [scAnt - our open source macro 3D scanner](https://github.com/evo-biomech/scAnt), may be
-the ideal low-cost source for high resolution 3D models of arthropods.
+If you do not, [scAnt - our open source macro 3D scanner](https://github.com/evo-biomech/scAnt), may be a suitable low-cost way to generate high resolution 3D models of small objects. But we are biased here, and plenty other good options exist.
 
-Alternatively, visit [Sketchfab](https://sketchfab.com/EvoBiomech/models) - perhaps, someone just happens to have
-uploaded a 3D model of your species in question.
+For example, visit [Sketchfab](https://sketchfab.com/EvoBiomech/models) - perhaps, someone just happens to have
+uploaded a 3D model of your species.
 
 ***
 ### NOTE
@@ -37,9 +34,9 @@ If your desired 3D model already has **< 20,000** polygons, you may be able to s
 [rigging guide](02_Rigging_3D_models.md). 
 ***
 
-### Important Blender **shortcuts** to make your life easier:
+### Important Blender **shortcuts** to make your life (much) easier:
 
-Now for the most important shortcuts to make interacting with blender easier.
+Here are the most important shortcuts to make interacting with blender easier.
 
 Relating to the viewport:
 
@@ -76,9 +73,8 @@ For a "not-so handy HotKeys In-depth Reference", refer to the official [HotKeys 
 
 ### Retopologising workflow
 
-The aim of retopologising your model is to reduce its vertex count. Generally, the lower the vertex count, while still 
-appearing realistic, the better. Unreal engine deals very well with large numbers of polygons, but simulating hundreds 
-of high resolution insects is still a computationally intensive task for your machine. 
+The aim of retopologising your model is to reduce its vertex count. Generally, the lower the vertex count, the better - as long as things still appear reasonably realistic. Unreal engine deals very well with large numbers of polygons, but simulating hundreds 
+of high resolution meshes is computationally intensive nonetheless. 
 
 Aim for **< 20,000** polygons (triangles) inside your model!
 
@@ -111,9 +107,9 @@ very small model sizes.
 
 ![](../images/clean_up_05.PNG)
 
-You can then simply change the scale of your model (in our case, we increase its scale 100 times) and adjust
+You can then simply change the scale of your model (in our case, we increased its scale 100 times) and adjust
 its size back to its original dimensions later in Unreal. For ease of handling (if not already the case) move your model
-to the centre of the scene. Its origin should be at the centre of the scene and its tarsi should intersect with the
+to the centre of the scene. Its origin should be at the centre of the scene and its legs/equivalent should intersect with the
 ground plane.
 
 ![](../images/clean_up_07.PNG)
@@ -200,22 +196,22 @@ In case your model appears "patchy" after the baking process, try adjusting the 
 * overlapping textures : decrease extrusion
 
 For the next set of steps it is **absolutely vital** that you execute them in the **correct order**, so that Blender knows
-which model and texture are considered "selected", and which one "active":
+which model and texture are considered "selected", and which "active":
 1. Open the **material** of the **original** model in the **Shader Editor**. Click on the **image texture node**. 
 ![](../images/clean_up_19_marked.png)
 2. Open the material of the **low poly** mesh and also click on the **image texture node**.
-3. In the 3D viewport go into **Object Mode**. 
+3. In the 3D viewport, go into **Object Mode**. 
 4. Select the original mesh *(“selected”)*
 5. Hold **SHIFT** and select the low poly mesh *(“active”)*
    (You can also perform the selection by clicking in the **Outliner**)
       
-6. Press **Bake** and hope for the best. 
+6. Press **Bake**, and hope for the best. 
 
 Check the progress bar at the bottom of the screen.
 
 ![](../images/clean_up_20.PNG)
 
-You should now see in the **UV Editor** and the 3D viewport that the texture of the original mesh has been successfully
+You should now see, in both the **UV Editor** and the 3D viewport, that the texture of the original mesh has been successfully
 projected onto the low poly mesh.
 
 ![](../images/clean_up_21.PNG)

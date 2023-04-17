@@ -10,7 +10,7 @@ and [David **Labonte**](https://twitter.com/EvoBiomech) (2023)
 
 ___
 
-![](../images/06_launch_new.png)
+![](../images/06_launch_better_together.png)
 
 ___
 
@@ -19,19 +19,19 @@ ___
 ### Requirements:
 
 * [Blender](https://www.blender.org/) (v3.0.1 or later)
-* A ([retopologised](01_Retopologising_3D_models.md)) 3D model (of an arthropod) you wish to add to the generator
+* A ([retopologised](01_Retopologising_3D_models.md)) 3D model you wish to add to the generator
 
-The key to great synthetic data are great 3D models.
-Here, we are going to assume that you already have a [retopologised](01_Retopologising_3D_models.md) 3D model you wish
+Behind every great synthetic dataset stands a great 3D model.
+We will assume that you already have a [retopologised](01_Retopologising_3D_models.md) 3D model you wish
 to use.
 
 ![](../images/clean_up_24_rig_01.png)
 
 rendering of a [retopologised](01_Retopologising_3D_models.md) low-polygonal 3D model (with a wireframe overlay)
 
-### Important Blender **shortcuts** to make your life easier:
+### Important Blender **shortcuts** to make your life (so much) easier:
 
-Now for the most important shortcuts to make interacting with blender easier.
+Now, again: the most important shortcuts to make interacting with blender easier.
 
 Relating to the viewport:
 
@@ -60,8 +60,8 @@ can additionally use:
 
 You always confirm your change by clicking the **LEFT Mouse Button**.
 
-* And, of course, **CTRL** + **Z** is your friend to revert your last steps. By default, you can go back **32 steps**,
-  but you can increase that number under **Edit/Preferences…/System** menu, if you want to.
+* And, of course, **CTRL** + **Z** is your friend to revert your last steps (we all make mistakes). By default, you can go back **32 steps**,
+  but you can increase that number under **Edit/Preferences…/System** menu, if you want/need to.
 
 For a handy "cheat-sheet", have a look
 at [Blender 3.0 Shortcuts](https://projects.vrac.iastate.edu/reu2022/wp-content/uploads/Blender-3.0-Shortcuts-v1.2.pdf)
@@ -77,7 +77,7 @@ our [standard rigging convention](../example_data/base_rig.blend).
 <img src=figures/rig_layout_dark.png#gh-dark-mode-only >
 <img src=figures/rig_layout_bright.png#gh-light-mode-only > 
 
-In theory, any model and rig combination is possible. Make sure, your model is posed with all tarsi in ground
+In theory, any model and rig combination is possible. Make sure, your model is posed with all legs/equivalent in ground
 contact in a somewhat natural pose. This is important, as we are going to use IK solvers to have the appendages
 interact with elements in the generated environment.
 
@@ -109,17 +109,17 @@ of your model.
 Next, we activate **Snap To** > **Volume** so that the joints we move automatically snap to the centre of the 
 surrounding mesh. Make sure to also select **Snap With** > **Center**, as the default is **Closest**.
 
-Furthermore, make sure "X mirror" is turned off while editing. Otherwise, any adjustment you make will affect the
+Furthermore, make sure "X mirror" is turned off while editing. Otherwise, any adjustment made will affect the
 respective joints (left and right) on both sides of the Armature.
 
 ![](../images/rig_06_clean.PNG)
 
-Now, one by one, select each joint and move it to their desired locations. Refer to our reference figures below:
+Now, one by one, select each joint and move it to their desired location. Refer to our reference figures below:
 
 > #### NOTE:
 > Take your time with the placement of joints. The more accurately you assign them in your model, the more realistic the
-resulting poses can be. You can always go back and refine their position, but you may have to repeat the **weight 
-painting** process detailed below
+resulting poses will be. You can always go back and refine their position, but you may have to repeat the **weight 
+painting** process detailed below afterward.
 
 <img src=figures/rig_layout_dark.png#gh-dark-mode-only >
 <img src=figures/rig_layout_bright.png#gh-light-mode-only > 
@@ -154,8 +154,8 @@ areas of the mesh, use the **Add** and **Subtract** brushes to paint in the area
 
 ![](../images/rig_10.PNG)
 
-Be very diligent with this final step, as otherwise your model will not deform correctly when being used inside the 
-generator.
+Be **very** diligent with this final step, as otherwise your model will not deform correctly inside the 
+generator, and everyone will be disappointed.
 
 When you are done, select the **Armature** and switch into **Pose Mode** to ensure all joints behave as expected and only
 affect the desired areas of the mesh!

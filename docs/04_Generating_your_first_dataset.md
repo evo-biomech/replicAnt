@@ -10,21 +10,20 @@ and [David **Labonte**](https://twitter.com/EvoBiomech) (2023)
 
 ___
 
-![](../images/06_launch_new.png)
+![](../images/06_launch_better_together.png)
 
 ___
 
 # Generating your first dataset
 
-We aim to make the data generation as straight forward as possible, while providing maximal variability. 
-Here, we will briefly outline how to use the generator project within the Unreal Engine 5 Editor, once you have
-acquired a suitable input subject 3D model (see [01](01_Retopologising_3D_models.md), [02](02_Rigging_3D_models.md), 
-[03](03_Bringing_3D_models_into_Unreal_guide.md)).
+We tried to make data generation as straight forward as possible, while providing maximal variability. We now briefly outline how to use the generator project within the Unreal Engine 5 Editor - make sure you have
+acquired a suitable input subject 3D model before you start (see [01](01_Retopologising_3D_models.md), [02](02_Rigging_3D_models.md), 
+[03](03_Bringing_3D_models_into_Unreal_guide.md))!
 
-The generator setup process is the same for all desired output datatypes. A single generated dataset can therefore be
-used to train a variety of networks through the use of our provided [data parsers](../UE5_parsers).
+The generator setup process is the same irrespective of the desired output datatypes. A single generated dataset can therefore be
+used to train a variety of networks provided you have the right [data parsers](../UE5_parsers).
 
-*For additional details (including which settings have been used in our examples) refer to the official publication.*
+*For additional details (including which settings have been used in our examples) refer to the publication.*
 
 ## Requirements:
 
@@ -34,37 +33,37 @@ used to train a variety of networks through the use of our provided [data parser
 
 ## Basic configuration
 
-Most functionality required to produce training datasets using replicAnt is exposed through the **FARTS Interface**.
+Most functionality is exposed through the **replicAnt Interface**.
 
 First, open the [**replicAnt.uproject**](../replicAnt.uproject) file.
 Then, simply **double-click** on one of the **.umap** example files under **/Content/Generator_config**.
 
-### The FARTS Interface
+### The replicAnt Interface
 
-The **FARTS Interface** should be open by default, located at the top left of the **Editor Window**. If that is not the
-case, simply **right-click** on **FARTS_Interface** in the **Content** folder and select **Run Editor Utility Widget**.
+The **replicAnt Interface** should open by default, located at the top left of the **Editor Window**. If that is not the
+case (sigh), simply **right-click** on **replicAnt_Interface** in the **Content** folder and select **Run Editor Utility Widget**.
 
 ![](../images/first_dataset_00.PNG)
 
-The **FARTS Interface** consists of four separate tabs, each to configure a different aspect of the data generation process.
+The **replicAnt Interface** consists of four separate tabs. Each tab configures a different aspect of the data generation process.
 
 #### 1. General
 
 ![](../images/first_dataset_01.PNG)
 
 * **Path**
-  * ```Export Path``` - Specifies the output location of your generated dataset
-  * ```Batch Name``` - The name of your dataset and name of the sub-folder which will contain the generated dataset in the
+  * ```Export Path``` - Specifies the output location of the generated dataset
+  * ```Batch Name``` - The name of the dataset and the sub-folder which will contain it, relative to the
   specified ```Export Path```. 
   
-    > **NOTE** : **DO NOT** include any "_" underscores in the **Batch Name**. Instead, use "-" or " " to separate words as
-    underscores are used in later [parser stages](../UE5_parsers) to distinguish different generated passes and data-types.
+    > **NOTE** : **DO NOT** include any "_" underscores in the **Batch Name** (otherwise little lizards will crawl out from under your bed and bite you - seriously, it will break stuff.). Instead, use "-" or " " to separate words.
+    Underscores are used in [parser stages](../UE5_parsers) to distinguish different generated passes and data-types.
 
 * **General**
-  * ```Iterations``` - Specify how many iterations (unique samples, comprising image passes and annotation files) you want
+  * ```Iterations``` - Specify how many iterations (unique samples, comprising image passes and annotation files) you seek
   to generate
-  * ```Passes``` - Specify which image passes are to be exported in each iteration. By default, all passes are exported.
-  However, in our example applications we predominantly make use of the **FinalColor** and **ID** passes. You can add
+  * ```Passes``` - Specify which image passes are to be exported per iteration. By default, all passes are exported.
+  We predominantly use of the **FinalColor** and **ID** passes. You can add
   passes by clicking on the (+) icon, or remove passes by clicking on the downwards-pointing arrow next to each pass
   element. 
   
@@ -76,9 +75,9 @@ The **FARTS Interface** consists of four separate tabs, each to configure a diff
     * ```Scatter Colony Every Nth``` - Update the location and pose of all subjects every n<sup>th</sup> iteration
     
       > **NOTE** : *The **ground plane** is the lowest hierarchical level, meaning all elements placed on top of it will 
-  also be regenerated every time it is updated. The scattered assets in turn influence the placement of the subjects of 
+  also be regenerated every time it is updated. Updating the ground plane is thus computationally expensive. The scattered assets in turn influence the placement of the subjects of 
   colony. Therefore, the lower in this list the element appears, the more seldomly (corresponding to lower values) it 
-  should be updated to be computationally efficient. As all materials and the camera placement and parameters are 
+  should be updated to retain a resemblance of computational efficiency. As all materials, the camera position and its optical parameters are 
   updated at every iteration, high variability can be achieved even with infrequent updates of **ground plane** and 
   **scatterers**.*
   
@@ -92,7 +91,7 @@ The **FARTS Interface** consists of four separate tabs, each to configure a diff
     remain unaffected and will be writen out as uncompressed **.png** files.
     * ```Export JSON Data``` - Export the data (annotation) file. 
     
-      > **NOTE**: In all our provided examples **data (annotation) files** are required.
+      > **NOTE**: In all provided examples **data (annotation) files** are required.
   
     ![](../images/first_dataset_03_spaced.png)
 
@@ -106,9 +105,9 @@ The **Subjects** tab allows the user to configure the composition and appearance
   * ```Types``` - List, comprising all subjects part of the simulated colony.
     ![](../images/first_dataset_05_spaced.png)
   You can add subjects by clicking on the (+) icon, or remove passes by clicking on the downwards-pointing arrow next to
-  each subject element. Make sure, not to remove all **None** entries from the list.
-  * ```Number Of Subjects``` - Number of simulated subjects comprising the colony. For each, one subject will be
-  randomly drawn from the list of subjects and the **Variation** within the range specified below applied.
+  each subject element. Make sure, that at least one **None** entry remains on the list.
+  * ```Number Of Subjects``` - Number of simulated subjects comprising the colony. In each iteration, one subject will be
+  randomly drawn from the list of subjects and the **Variation** within the range specified below is applied.
  
 
 * **Variation**
@@ -134,13 +133,13 @@ in the procedurally generated environment.)
 
 #### 3. Environment
 
-In the **Environment** tab, you can specify elements relating to lighting, post-processing, and world generation.
+In the **Environment** tab, you can specify elements relevant for lighting, post-processing, and world generation.
 
 ![](../images/first_dataset_06.PNG)
 
 * **Environment**
   * ```HDRIs``` - list of all HDRIs (High Dynamic Range Images) the generator will draw from when lighting the 
-  environment. This is where new HDRIs can be added, ones loaded into the Unreal Project.
+  environment. This is where new HDRIs can be added, once loaded into the Unreal Project.
   * ```Fog Is Volumetric``` - Whether to tread the fog as volumetric during post-processing
   * ```Maximum Fog Density``` - Level of fog density / opaqueness
 * **Ground Generation**
@@ -160,16 +159,15 @@ The **Debug** tab can be used to set the randomisation seed and add delays to th
   * ```Seed``` - Explicitly set the Seed to repeatedly produce the same variation.
     
       > **NOTE** : changing the colony size, ground tesselation, or scattered assets will result in different
-      output appearances, even with the same seed as it cannot be guaranteed that the same camera poses can
-      be assumed.
+      output appearances, even with the same seed: it cannot be guaranteed that the same camera pose be retained across iterations.
 * **Debug**
   * ```Engine  Warm Up Time``` , ```Iteration  Warm Up Time``` , ```Frame Warm Up Time``` - introduces delays at various
-  points in the dataset generation process to combat memory access issues potentially leading to system instability.
+  points in the dataset generation process to combat memory access issues which may cause system instability. Computers have fragile souls.
 
 ## Generate
 
-When all is configured, click on **Generate** at the bottom of any **FARTS_Interface** tab to begin the dataset
-generation process.
+When all is configured, click **Generate** at the bottom of any **FARTS_Interface** tab  - the dataset
+generation process so begins.
 
 ![](../images/first_dataset_08.PNG) 
 

@@ -16,7 +16,8 @@ Content/Internal/effects/
 Content/Megascans/
 Content/Subjects/
 Content/HDRI/
-Temp Content
 
-# excluding test environments
-Content/Generator_config/Generator_example_PLANTS
+# local files
+Intermediate/
+Saved/
+DerivedDataCache/

@@ -10,7 +10,7 @@ and [David **Labonte**](https://twitter.com/EvoBiomech) (2023)
 
 ___
 
-![](../images/06_launch_new.png)
+![](../images/06_launch_better_together.png)
 
 ___
 
@@ -18,38 +18,35 @@ ___
 
 ## 1. Unreal Engine Randomly Crashes
 
-As there can be plenty of reasons WHY Unreal Crashes with seemingly random error codes pointing to 
-various **EXCEPTION_ACCESS_VIOLATION** addresses, I have compiled here the most common fixes.
+There are plenty of reasons WHY Unreal may crash with seemingly random error codes pointing to 
+any of a large number of **EXCEPTION_ACCESS_VIOLATION** addresses. A joy. Here is a compilation of the most common fixes.
 
 ### 1.1 Decreasing the number of meshes in the scene
 
-The simplest fix, which often suffices on systems with limited **RAM** or **VRAM**, is to simply decrease the number
-of meshes (and/or their complexity) simultaneously occupying memory in your scene. This can be done by changing one of
-these three parameters:
+A simple fix, which often does the trick on systems with limited **RAM** or **VRAM**, is to decrease the number
+of meshes (and/or their complexity) which simultaneously occupy memory in your scene. This can be done by changing one of
+the following three parameters:
 1. **Tesselation level** - Decrease the **Tesselation Level** in the **User Interface** > **Environment** tab. The
 default level of ```30``` (influencing the number of subdivision and thus mesh complexity of the ground plane) is too
 high for some systems.
-2. **Asset Scatterers** - Decrease the number of **assets** each asset scatterer can minimally and maximally spawn.
-In some instances, while the system would have sufficient RAM / VRAM to load all scattered assets, the Unreal
+2. **Asset Scatterers** - Decrease the range of **assets** each asset scatterer can spawn.
+In some instances, the system may have sufficient RAM / VRAM to load all scattered assets, but the Unreal
 Instance has an upper limit as to how many objects can persist in a scene concurrently.
-3. **Colony size** - While this is understandably the last parameter one would want to change, depending on the 
-application, the number of subjects simulated greatly affects the generator performance. Decreasing the number of
-subjects can aid in improving the system stability.
+3. **Colony size** - this is arguably the last parameter you may want to change - the number of subjects can greatly affect the quality of the synthetic data. However, decreasing the number of subjects can aid in improving the system stability.
 
 ### 1.2 Switching to legacy versions of DirectX
-In case of frequent crashes (Windows 10 & 11 OS), stating EXCEPTION ACCESS VIOLATION of various read & write addresses, 
+In case of frequent crashes (Windows 10 & 11 OS) which scream EXCEPTION ACCESS VIOLATION of all sorts of read & write addresses, 
 consider switching from DirectX 12 to DirectX11:
 
-In the **Unreal Engine Project Settings > Platforms - Windows > Targeted RHIs**
-setting the Default RHI to DirectX 11
+In the **Unreal Engine Project Settings > Platforms - Windows > Targeted RHIs**, set the Default RHI to DirectX 11
 
 **WARNING:**  Switching to DirectX 11 is a temporary fix, as the rendering performance and image quality of the resulting 
-samples may decrease. As this is a Windows system issue we cannot provide support or a specific timeline of when the 
-underlying issue will be addressed.
+samples may decrease. As this is a Windows system issue, we cannot provide support or a specific timeline of when the 
+underlying issue will be addressed. Sorry. Complain to Bill!
 
 ### 1.3 Editing registry entries
 
-Editing registry entries can help to ensure rendering delays do not terminate applications. Open the **Registry Editor**
+Editing registry entries can help to avoid that applications are not terminated by rendering delays. Open the **Registry Editor**
 and edit the following entries under ```Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers```
 
 ![](../images/registry_entries.png)
@@ -95,7 +92,7 @@ any tools that may check on GPU usage or influence clock-speed, memory usage, et
 > * TechPowerUp GPU-Z
 > * MSI Afterburner
 > 
-> (_**NOTE**: This list is (very likely) not complete. If you find further applications that influence the
+> (_**NOTE**: This list is (almost certainly) not complete. If you find further applications that influence the
 > generator performance, please raise an **issue** and let us know, so we can expand this list!_)
 
 
