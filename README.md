@@ -105,7 +105,7 @@ If you do not wish to install the pre-configured environment the relevant depend
 
 ![](images/01_epic_unreal.PNG)
 
-Select **Library** and click on the **+** icon to install a new version of Unreal Engine. **replicAnt** is build on Unreal Engine 5, so make sure to select the latest Unreal Engine 5 release, and follow the installation guide. 
+Select **Library** and click on the **+** icon to install a new version of Unreal Engine. **replicAnt** is build on Unreal Engine 5, so make sure to select the latest Unreal Engine 5.0 release, and follow the installation guide (Issues have been reported with builds later than 5.1, which we are currently investigating). 
 
 Unless you are planning on running extensive debugging or further development, installation of the **core components** should be sufficient. All additionally required functionality is provided in our project environment or, alternatively, can be installed later on.
 
