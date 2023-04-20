@@ -5,7 +5,7 @@
 
 # replicAnt
 
-"a synthetic data-driven approach to animal behavioural research"
+"generating annotated images of animals in complex environments with Unreal Engine"
 
 by [Fabian **Plum**](https://twitter.com/fabian_plum), 
 [René **Bulla**](https://twitter.com/renebulla), 
