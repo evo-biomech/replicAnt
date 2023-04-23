@@ -215,11 +215,14 @@ please make sure to cite them:
         }
 
     @misc{Plumetal2023,
-        title = {replicAnt},
-        author = {Plum, Fabian; Bulla, Rene; Beck, Hendrik; Imirzian, Natalie; David, Labonte},
-        resource = {GitHub repository},
-        howpublished = {https://github.com/FabianPlum/OmniTrax},
-        year = {2023}
+        author = {Fabian Plum and Rene Bulla and Hendrik Beck and Natalie Imirzian and David Labonte},
+        title = {replicAnt - generating annotated images of animals in complex environments with Unreal Engine},
+        elocation-id = {2023.04.20.537685},
+        year = {2023},
+        doi = {10.1101/2023.04.20.537685},
+        publisher = {Cold Spring Harbor Laboratory},
+        URL = {https://www.biorxiv.org/content/early/2023/04/20/2023.04.20.537685},
+        journal = {bioRxiv}
         }
 
 ## Contributing
