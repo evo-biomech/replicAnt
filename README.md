@@ -5,7 +5,7 @@
 
 # replicAnt
 
-"a synthetic data-driven approach to animal behavioural research"
+"generating annotated images of animals in complex environments with Unreal Engine"
 
 by [Fabian **Plum**](https://twitter.com/fabian_plum), 
 [René **Bulla**](https://twitter.com/renebulla), 
@@ -105,7 +105,7 @@ If you do not wish to install the pre-configured environment the relevant depend
 
 ![](images/01_epic_unreal.PNG)
 
-Select **Library** and click on the **+** icon to install a new version of Unreal Engine. **replicAnt** is build on Unreal Engine 5, so make sure to select the latest Unreal Engine 5 release, and follow the installation guide. 
+Select **Library** and click on the **+** icon to install a new version of Unreal Engine. **replicAnt** is build on Unreal Engine 5, so make sure to select the latest Unreal Engine 5.0 release, and follow the installation guide (Issues have been reported with builds later than 5.1, which we are currently investigating). 
 
 Unless you are planning on running extensive debugging or further development, installation of the **core components** should be sufficient. All additionally required functionality is provided in our project environment or, alternatively, can be installed later on.
 
@@ -170,7 +170,7 @@ If you wanted to bring your own (animal) models into the generator, kindly refer
 ### External files
 
 * Additional assets need to be downloaded and placed into the content folder. These files are hosted externally under the following link:
-[Google Drive](https://drive.google.com/file/d/1FiboPJmrhqv6cDB2Ara-2n3-yDdHg0sh/view?usp=sharing)
+[Google Drive](https://drive.google.com/file/d/1h6p040Gy7vvwY12C7zOBdEdjgBTOihhO/view?usp=sharing)
 * We regularly update a library of pre-configured subject models, which can be [downloaded here](https://drive.google.com/drive/u/0/folders/1l9g7tlFZ3HWIA1z8x-My-LKYPrqz77aq).
 The following subject models are currently available:
   * **Leafcutter ants** - _Atta vollenweideri_ (various worker sizes, ranging from 1.1 mg to 50.1 mg)
@@ -215,11 +215,14 @@ please make sure to cite them:
         }
 
     @misc{Plumetal2023,
-        title = {replicAnt},
-        author = {Plum, Fabian; Bulla, Rene; Beck, Hendrik; Imirzian, Natalie; David, Labonte},
-        resource = {GitHub repository},
-        howpublished = {https://github.com/FabianPlum/OmniTrax},
-        year = {2023}
+        author = {Fabian Plum and Rene Bulla and Hendrik Beck and Natalie Imirzian and David Labonte},
+        title = {replicAnt - generating annotated images of animals in complex environments with Unreal Engine},
+        elocation-id = {2023.04.20.537685},
+        year = {2023},
+        doi = {10.1101/2023.04.20.537685},
+        publisher = {Cold Spring Harbor Laboratory},
+        URL = {https://www.biorxiv.org/content/early/2023/04/20/2023.04.20.537685},
+        journal = {bioRxiv}
         }
 
 ## Contributing

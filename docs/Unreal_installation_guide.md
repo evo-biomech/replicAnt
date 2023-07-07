@@ -40,7 +40,7 @@ ___
 
 ![](../images/01_epic_unreal.PNG)
 
-Now, click on **Library** and click on the **+** icon to install a new version of Unreal Engine. As we built replicAnt on Unreal Engine 5, select the latest Unreal Engine 5 release, and follow the installation guide. 
+Now, click on **Library** and click on the **+** icon to install a new version of Unreal Engine. As we built replicAnt on Unreal Engine 5, select the latest Unreal Engine 5.0 release, and follow the installation guide (Issues have been reported with builds later than 5.1 which we are currently investigating)
 
 Unless you are planning on running extensive debugging or further development, only selecting **core components** should be sufficient. All additionally required functionality is provided in our project environment and, alternatively, can be installed later on.
 
@@ -69,7 +69,7 @@ This will take a while. There are a lot of files to be copied.
 
 2.	Once the download has finished, you will next need to download all additional assets (3D meshes and materials) we have provided externally. NOTE: This project is running under a non-commercial license and any assets used for the generation of synthetic datasets may not be used or re-distributed for commercial purposes.
 
-[Download replicAnt external content files]( https://drive.google.com/file/d/1FiboPJmrhqv6cDB2Ara-2n3-yDdHg0sh/view?usp=sharing)
+[Download replicAnt external content files](https://drive.google.com/file/d/1h6p040Gy7vvwY12C7zOBdEdjgBTOihhO/view?usp=sharing)
 
 Download and unpack the files into the **Content** directory of the replicAnt project.
 

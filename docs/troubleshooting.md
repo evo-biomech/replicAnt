@@ -95,6 +95,23 @@ any tools that may check on GPU usage or influence clock-speed, memory usage, et
 > (_**NOTE**: This list is (almost certainly) not complete. If you find further applications that influence the
 > generator performance, please raise an **issue** and let us know, so we can expand this list!_)
 
+### 1.5  (files specific to UE 5.03)
+
+In case you are encountering GPU crashes accompanied by the following message:
+
+**GPU crashed or d3d device removedf use -d3ddebug to enable the d3d debug device**
+
+Replace the following .dll file in your Unreal Installation:
+1. go to ..\UE5\Engine\Binaries\Win64\UnrealEditor-D3D12RHI.dll and either rename the file or back it up in an external directory
+2. download the following zip file: https://forums.unrealengine.com/uploads/short-url/q2x7oamoQBUvYu0iMHLXfEPZCyy.zip
+3. extract the downloaded .dll in the place of the original file
+
+
+> In case this does not fix the issue, make sure to revert back to the original .dll file!
+> 
+> _fix discovered in the [Unreal Dev Community Forum](https://forums.unrealengine.com/t/ue5-gpu-crashed-or-d3d-device-removed/524297/50)_
+
+
 
 ---
 
