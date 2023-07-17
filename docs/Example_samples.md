@@ -93,8 +93,8 @@ below each sample.
 
 The following samples are part of the datasets used to semantic segmentation networks, as
 presented in [***replicAnt* - generating annotated images of animals in complex environments with Unreal
-Engine**](https://www.biorxiv.org/content/10.1101/2023.04.20.537685v1). ID maps are displayed
-below each sample.
+Engine**](https://www.biorxiv.org/content/10.1101/2023.04.20.537685v1). ID maps (with increased contrast for legibility)
+are displayed below each sample.
 
 <table style="padding:10px">
   <tr> 
@@ -141,19 +141,19 @@ with [../example_data/input-multi/input-multi_01](../example_data/input-multi/in
 
 <table style="padding:10px">
   <tr> 
-   <td><img src="../example_data/input-multi/input-multi_01.JPG" width = 500px ></td>
-   <td><img src="../example_data/input-multi/input-multi_01_Depth.png" width = 500px ></td>
+   <td><img src="../example_data/input-multi/input-multi_01.JPG" width = 300px ></td>
+   <td><img src="../example_data/input-multi/input-multi_01_Depth.png" width = 300px ></td>
   </tr>
   <tr> 
    <td>image pass </td>
    <td>depth pass </td>
   </tr>
     <tr> 
-   <td><img src="../example_data/input-multi/input-multi_01_ID.png" width = 500px ></td>
-   <td><img src="../example_data/input-multi/input-multi_01_NormalWA.png" width = 500px ></td>
+   <td><img src="../example_data/input-multi/input-multi_01_ID.png" width = 300px ></td>
+   <td><img src="../example_data/input-multi/input-multi_01_NormalWA.png" width = 300px ></td>
   </tr>
   <tr> 
-   <td>id pass </td>
+   <td>id pass</td>
    <td>normal pass </td>
   </tr>
 </table>
