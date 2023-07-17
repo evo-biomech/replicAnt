@@ -16,7 +16,7 @@ ___
 
 ## Example samples
 
-### _Atta vollenweideri_ - multi model:
+### _Atta vollenweideri_ - multi animal dataset:
 
 The following samples are part of the datasets used to train detection, semantic segmentation, and classifier networks, as
 presented in [***replicAnt* - generating annotated images of animals in complex environments with Unreal
@@ -45,7 +45,7 @@ Engine**](https://www.biorxiv.org/content/10.1101/2023.04.20.537685v1)
   </tr>
 </table>
 
-### _Sungaya inexpectata_ - single model:
+### _Sungaya inexpectata_ - single animal dataset:
 
 The following samples are part of the datasets used to pose estimation networks, as
 presented in [***replicAnt* - generating annotated images of animals in complex environments with Unreal
@@ -85,7 +85,7 @@ below each sample.
   </tr>
 </table>
 
-### _Leptoglossus zonatus_ - single model:
+### _Leptoglossus zonatus_ - multi animal dataset:
 
 The following samples are part of the datasets used to semantic segmentation networks, as
 presented in [***replicAnt* - generating annotated images of animals in complex environments with Unreal
