@@ -131,6 +131,33 @@ below each sample.
 
 ---
 
+### Example datasets to build and verify parsers:
+
+Two types of example datasets (one for [single animal](../example_data/input-single), one
+for [multi animal](../example_data/input-multi) applications) are located in [../exampled_data](../example_data).
+
+Below are the samples associated
+with [../example_data/input-multi/input-multi_01](../example_data/input-multi/input-multi_01.JPG):
+
+<table style="padding:10px">
+  <tr> 
+   <td><img src="../example_data/input-multi/input-multi_01.JPG" width = 500px ></td>
+   <td><img src="../example_data/input-multi/input-multi_01_Depth.png" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td>image pass </td>
+   <td>depth pass </td>
+  </tr>
+    <tr> 
+   <td><img src="../example_data/input-multi/input-multi_01_ID.png" width = 500px ></td>
+   <td><img src="../example_data/input-multi/input-multi_01_NormalWA.png" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td>id pass </td>
+   <td>normal pass </td>
+  </tr>
+</table>
+
 ### Official full datasets:
 
 All datasets, both generated and real, additional SI, and the best performing networks are hosted via Zenodo:
