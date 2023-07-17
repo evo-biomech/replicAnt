@@ -49,8 +49,8 @@ Engine**](https://www.biorxiv.org/content/10.1101/2023.04.20.537685v1)
 
 The following samples are part of the datasets used to pose estimation networks, as
 presented in [***replicAnt* - generating annotated images of animals in complex environments with Unreal
-Engine**](https://www.biorxiv.org/content/10.1101/2023.04.20.537685v1). DeepLabCut annotation conventions displayed 
-below each sample
+Engine**](https://www.biorxiv.org/content/10.1101/2023.04.20.537685v1). DeepLabCut annotation conventions are displayed 
+below each sample.
 
 <table style="padding:10px">
   <tr> 
@@ -82,6 +82,46 @@ below each sample
    <td><img src="https://drive.google.com/uc?export=view&id=1i-kHUNRQXTj7fJ9lW9G22dAKqc2Hyo-m" width = 500px ></td>
    <td><img src="https://drive.google.com/uc?export=view&id=1rbsHBYwa1RMV8RBwFQ2Fhiyxavzp3vwo" width = 500px ></td>
    <td><img src="https://drive.google.com/uc?export=view&id=1I-gQUIGNRH7_rkBD9yUYRRplb6VLtOwA" width = 500px ></td>
+  </tr>
+</table>
+
+### _Leptoglossus zonatus_ - single model:
+
+The following samples are part of the datasets used to semantic segmentation networks, as
+presented in [***replicAnt* - generating annotated images of animals in complex environments with Unreal
+Engine**](https://www.biorxiv.org/content/10.1101/2023.04.20.537685v1). ID maps are displayed 
+below each sample.
+
+<table style="padding:10px">
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1Xlydv22JO5rDhbylvlavhxNdFxvJK2FO" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1rNrp2SIYwsPt1Sk8amKOZfX9Ht9xjvCR" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=19UOoZUk3XKobYaChXMYTjWGHovYVgVR2" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1wqzuUQsc8DKpk-Xdy9rfcbquXHcnUHz6" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1h40J2CZyHNca4Ja3Yx22eIIB7P6ypOMW" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1RCwPve_DhiPur_7AQwjZr2z73L1OSkXW" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1EXixm31TktGuoIJL4vi-2lZUvYGfwXtR" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1D7gBPRJ3s-hfzHmXSjAcNJNmwq_tf8sn" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1GK9oaKfIiQpHiEtQcPc7DL7PH8IW0lVi" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1tQn-hw_U5rh5y41I2XYOxI2ItJaDpOAo" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1-NbJPz27KTxWrvoWBp68_coP6W1PKPBq" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1czzr5NsrLjomRABsE001ZJT2V0ezwj08" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1b-k14h44ddolwUwPek-GSQjIMI8jaWPl" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1lgXsDoh0tka4j8omlLPXLFe8k6ATd87D" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1wPNI4bEoCGNoG9vwH6FN_XM2rS9fvYO-" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1YhOy0tVEHyVIJgbsGMoTd5X1JmCkUIBR" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1Jry0GhhZkIo_ReT6I3wW-Qs6jCa3zxTo " width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1wTKyfQ4qq4UpH6W5dLjr709K6tT9sEQY" width = 500px ></td>
   </tr>
 </table>
 
