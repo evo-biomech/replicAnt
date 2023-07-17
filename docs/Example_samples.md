@@ -45,7 +45,45 @@ Engine**](https://www.biorxiv.org/content/10.1101/2023.04.20.537685v1)
   </tr>
 </table>
 
+### _Sungaya inexpectata_ - single model:
 
+The following samples are part of the datasets used to pose estimation networks, as
+presented in [***replicAnt* - generating annotated images of animals in complex environments with Unreal
+Engine**](https://www.biorxiv.org/content/10.1101/2023.04.20.537685v1). DeepLabCut annotation conventions displayed 
+below each sample
+
+<table style="padding:10px">
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1WEKeCQMyg3dr77bYzc0wyMfX1ANVpjMU" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1pTLOpi3jIPM0WMx9MH6h4tzIIkcCl8_o" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1IR1_DVslj-f2KiNJv6Q4tIiPWtf4Qg_B" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=174AAXkx_voL7Nbivr5Xz6dSIEElLBtcg" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1_e8myztRpVj1ZVk7HUe-wEl0vjZesFRs" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1VR5ej-FlFWew1oH5u3LBOioWrEQLHpJD" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1kbhfHeHn9edfhVaJjGn9bbchrIqqL9sb" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1rXv1Is79vt9_qpjxCShK74oIPsRnDViN" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1yoLLOaRhzKqzVO_uC8aDgypImqLUk0N-" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1Re4wpU5zlgU_R24-Xg_uNEvWk8CHAYSS" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1VwePNNyjGNChEtfy9-wLpCxk_gMCaY3A" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1lUuspt_oMF3q1i7Hc5Wpx561juPi0XKD" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1xLaNd4MXaiBGJBgz0s3qTcypXGNdiQrB" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=14bqfFZHvdkDBU0kNybtIx5NjX_3Ur8H9" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1TNKBlzZTqDN_7Qc3JPLHci5ZpzKjfY_B" width = 500px ></td>
+  </tr>
+  <tr> 
+   <td><img src="https://drive.google.com/uc?export=view&id=1i-kHUNRQXTj7fJ9lW9G22dAKqc2Hyo-m" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1rbsHBYwa1RMV8RBwFQ2Fhiyxavzp3vwo" width = 500px ></td>
+   <td><img src="https://drive.google.com/uc?export=view&id=1I-gQUIGNRH7_rkBD9yUYRRplb6VLtOwA" width = 500px ></td>
+  </tr>
+</table>
 
 ---
 
