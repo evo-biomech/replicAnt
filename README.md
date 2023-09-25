@@ -2,6 +2,7 @@
 [![license](https://img.shields.io/github/license/evo-biomech/replicAnt.svg?style=flat)](https://github.com//evo-biomech/replicAnt)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 ![Unreal Engine](https://img.shields.io/badge/Made%20with-UNREAL%20ENGINE%205-%23313131.svg?&logo=unrealengine)
+[![DOI](https://zenodo.org/badge/392289312.svg)](https://zenodo.org/badge/latestdoi/392289312)
 
 # replicAnt
 
