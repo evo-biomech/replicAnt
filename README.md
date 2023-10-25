@@ -217,12 +217,12 @@ please make sure to cite them:
 
     @misc{Plumetal2023,
         author = {Fabian Plum and Rene Bulla and Hendrik Beck and Natalie Imirzian and David Labonte},
-        title = {replicAnt - generating annotated images of animals in complex environments with Unreal Engine},
+        title = {replicAnt: A pipeline for generating annotated images of animals in complex environments using Unreal Engine},
         elocation-id = {2023.04.20.537685},
         year = {2023},
         doi = {10.1101/2023.04.20.537685},
         publisher = {Cold Spring Harbor Laboratory},
-        URL = {https://www.biorxiv.org/content/early/2023/04/20/2023.04.20.537685},
+        URL = {https://www.biorxiv.org/content/10.1101/2023.04.20.537685v2},
         journal = {bioRxiv}
         }
 
