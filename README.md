@@ -19,6 +19,11 @@ ___
 ![](images/06_launch_better_together.png)
 
 ***
+
+https://github.com/evo-biomech/replicAnt/assets/26245490/0d9108d8-f1d1-4d18-9c91-182bcd2aa2a9
+
+***
+
 <img src=docs/figures/Fig_1_dark.png#gh-dark-mode-only >
 <img src=docs/figures/Fig_1_bright.png#gh-light-mode-only > 
 
