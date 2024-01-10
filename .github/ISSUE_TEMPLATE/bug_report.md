@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve FARTS
+about: Create a report to help us improve replicAnt
 title: ''
 labels: ''
 assignees: ''
