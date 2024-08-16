@@ -146,7 +146,7 @@ Download and unpack the files into the **Content** directory of the **replicAnt*
 
 ![](images/05_external_files.png)
 
-3. Launch **replicAnt.uproject** by double-clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. You can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/EpicGames/BlenderTools/releases), or for some exercise.
+3. Launch **replicAnt.uproject** by double-clicking on the file. When opening the project for the first time, it may take up to 30 minutes to compile all shaders. You can use the spare time to install [Blender](https://www.blender.org/) and the latest version of [Send2Unreal](https://github.com/poly-hammer/BlenderTools/releases), or for some exercise.
 
 ![](images/06_launch.png)
 
