@@ -117,7 +117,7 @@ Unless you are planning on running extensive debugging or further development, i
 
 ![](images/02_epic_unreal.PNG)
 
-4.	While your computer is busy installing Unreal Engine, connect your GitHub account to your newly created Epic Games account. For a thorough guide, refer to the (official documentation](https://www.unrealengine.com/en-US/ue-on-github)
+4.	While your computer is busy installing Unreal Engine, connect your GitHub account to your newly created Epic Games account. For a thorough guide, refer to the [official documentation](https://www.unrealengine.com/en-US/ue-on-github)
 
 In short, head over to your [Epic Games account]( https://www.unrealengine.com/account/connections), and under **Connections**, connect to your GitHub profile. Simply follow the instructions prompted in your browser and authorize Epic Games. You will then receive a confirmation email to join the Epic Games organisation on GitHub to access all source code and plugins.
 
