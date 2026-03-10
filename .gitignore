@@ -26,3 +26,9 @@ Content/HDRI/
 Intermediate/
 Saved/
 DerivedDataCache/
+Binaries/
+Build/
+Plugins/
+replicAnt.sln
+.vs/
+.vsconfig
