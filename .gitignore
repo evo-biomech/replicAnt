@@ -14,7 +14,10 @@ UE5_parsers/.ipynb_checkpoints/*
 Content/Internal/MaterialGeneration/Materials/
 Content/Internal/effects/
 Content/Megascans/
-Content/Subjects/
+Content/Subjects/*
+!Content/Subjects/Mouse/
+!Content/Subjects/SMILyANT/
+!Content/Subjects/SMILySTICK/
 Content/HDRI/
 
 # local files
