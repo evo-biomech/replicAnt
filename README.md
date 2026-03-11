@@ -48,6 +48,7 @@ and [3D](UE5_parsers/Generate_Custom_3D_Dataset.ipynb) pose estimation,
 
 ## Updates:
 
+* **10.03.2026** - **Unreal Engine 5.4 migration** — upgraded engine from 5.0.3 → 5.4; added SMIL parametric mesh model support (PCA-driven morphological variation); three new built-in subject models (**SMILyANT**, **SMILySTICK**, **Mouse** with fur/groom simulation); new **QuadrupedBase** and **ArachBase** subject archetypes alongside the existing InsectBase; Lumen GI, Virtual Shadow Maps, Path Tracing, and the Substrate material system are now enabled by default. See [CHANGES.md](docs/dev_log/CHANGES.md) for the full change log.
 * **16.04.2023** - Added first official [**release** version 1.0.0](https://github.com/evo-biomech/replicAnt/releases/tag/v1.0.0)
 
 ## Installation Guide
@@ -111,7 +112,7 @@ If you do not wish to install the pre-configured environment the relevant depend
 
 ![](images/01_epic_unreal.PNG)
 
-Select **Library** and click on the **+** icon to install a new version of Unreal Engine. **replicAnt** is build on Unreal Engine 5, so make sure to select the latest Unreal Engine 5.0 release, and follow the installation guide (Issues have been reported with builds later than 5.1, which we are currently investigating). 
+Select **Library** and click on the **+** icon to install a new version of Unreal Engine. **replicAnt** now runs on **Unreal Engine 5.4** — make sure to select the **5.4** release and follow the installation guide. If you require the original UE 5.0.3-compatible version, download [release v1.0.0](https://github.com/evo-biomech/replicAnt/releases/tag/v1.0.0) instead.
 
 Unless you are planning on running extensive debugging or further development, installation of the **core components** should be sufficient. All additionally required functionality is provided in our project environment or, alternatively, can be installed later on.
 
@@ -142,7 +143,7 @@ git clone https://github.com/evo-biomech/replicAnt
 
 [Download replicAnt external content files](https://drive.google.com/file/d/1h6p040Gy7vvwY12C7zOBdEdjgBTOihhO/view?usp=share_link)
 
-Download and unpack the files into the **Content** directory of the **replicAnt** project.
+> **Important:** Download and extract these files into the **Content** directory of the **replicAnt** project **before opening the project for the first time**. If the project is launched without these assets in place, Unreal Engine will be unable to resolve the expected asset references, which can result in broken links that are difficult to repair afterwards.
 
 ![](images/05_external_files.png)
 
@@ -175,7 +176,7 @@ If you wanted to bring your own (animal) models into the generator, kindly refer
 
 ### External files
 
-* Additional assets need to be downloaded and placed into the content folder. These files are hosted externally under the following link:
+* Additional assets need to be downloaded and extracted into the **Content** folder **before opening the project for the first time** — otherwise Unreal Engine cannot resolve the expected asset references and links may break. These files are hosted externally under the following link:
 [Google Drive](https://drive.google.com/file/d/1h6p040Gy7vvwY12C7zOBdEdjgBTOihhO/view?usp=sharing)
 * We regularly update a library of pre-configured subject models, which can be [downloaded here](https://drive.google.com/drive/u/0/folders/1l9g7tlFZ3HWIA1z8x-My-LKYPrqz77aq).
 The following subject models are currently available:
@@ -186,6 +187,11 @@ The following subject models are currently available:
   * **Stick insects** - _Peruphasma schultei_ (male and female)
   * **Leaf-footed bug** - _Leptoglossus zonatus_ (adult)
   * **Desert ants** - _Pogonomyrmex desertorum_ (worker)
+
+The following subject models are built into the project (no separate download required):
+  * **SMILyANT** — parametric ant model with PCA-driven morphological variation across 80 species
+  * **SMILySTICK** — parametric stick insect model with species-specific textures (_Brockphasma_, _Peruphasma_, _Sungaya_)
+  * **Mouse** — _Mus musculus_ with full fur/groom simulation (HairStrands) and parametric variant (SMILyMOUSE)
 
 ### Troubleshooting
 
