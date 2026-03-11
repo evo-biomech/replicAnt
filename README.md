@@ -48,7 +48,7 @@ and [3D](UE5_parsers/Generate_Custom_3D_Dataset.ipynb) pose estimation,
 
 ## Updates:
 
-* **10.03.2026** - **Unreal Engine 5.4 migration** — upgraded engine from 5.0.3 → 5.4; added SMIL parametric mesh model support (PCA-driven morphological variation); three new built-in subject models (**SMILyANT**, **SMILySTICK**, **Mouse** with fur/groom simulation); new **QuadrupedBase** and **ArachBase** subject archetypes alongside the existing InsectBase; Lumen GI, Virtual Shadow Maps, Path Tracing, and the Substrate material system are now enabled by default. See [CHANGES.md](docs/dev_log/CHANGES.md) for the full change log.
+* **10.03.2026** - **Unreal Engine 5.4 migration** — upgraded engine from 5.0.3 → 5.4; added [SMIL](https://github.com/FabianPlum/SMILify) parametric mesh model support (PCA-driven morphological variation); three new built-in subject models (**SMILyANT**, **SMILySTICK**, **Mouse** with fur/groom simulation); new **QuadrupedBase** and **ArachBase** subject archetypes alongside the existing InsectBase; Lumen GI, Virtual Shadow Maps, Path Tracing, and the Substrate material system are now enabled by default. See [CHANGES.md](docs/dev_log/CHANGES.md) for the full change log.
 * **16.04.2023** - Added first official [**release** version 1.0.0](https://github.com/evo-biomech/replicAnt/releases/tag/v1.0.0)
 
 ## Installation Guide
@@ -188,10 +188,12 @@ The following subject models are currently available:
   * **Leaf-footed bug** - _Leptoglossus zonatus_ (adult)
   * **Desert ants** - _Pogonomyrmex desertorum_ (worker)
 
-The following subject models are built into the project (no separate download required):
+The following subject models are built into the project (no separate download required). The **SMILy** variants are driven by the [SMILify](https://github.com/FabianPlum/SMILify) parametric mesh framework:
   * **SMILyANT** — parametric ant model with PCA-driven morphological variation across 80 species
   * **SMILySTICK** — parametric stick insect model with species-specific textures (_Brockphasma_, _Peruphasma_, _Sungaya_)
   * **Mouse** — _Mus musculus_ with full fur/groom simulation (HairStrands) and parametric variant (SMILyMOUSE)
+
+> **Note:** SMIL-based parametric models (**SMILyANT**, **SMILySTICK**, **SMILyMOUSE**) are currently only fully supported in **single-animal** scenarios. Multi-subject generation with these models is not yet supported.
 
 ### Troubleshooting
 
