@@ -7,11 +7,11 @@
 | Field | Value |
 |-------|-------|
 | Applying as | Company/team |
-| How did you hear about us? | Other — (TODO: specify) |
+| How did you hear about us? | Other — Our lead Unreal Engine developer and technical artist told us about the program. |
 | Country | Germany |
 | Team size | <5 |
-| Company/Institution | (TODO: scAnt3D / university affiliation?) |
-| Company website | (TODO: scAnt3D website once updated) |
+| Company/Institution | scAnt UG (haftungsbeschränkt) |
+| Company website | https://scant3d.com/ |
 
 ---
 
@@ -20,8 +20,7 @@
 | Field | Value |
 |-------|-------|
 | Project name | replicAnt |
-| Project media link | (TODO: add demo video / trailer link) |
-| Project build link | (TODO: optional) |
+| Project media link | https://www.youtube.com/watch?v=DD7dwHijItA |
 | Project website | https://github.com/evo-biomech/replicAnt |
 | Phase | Prototype |
 | Engine | Unreal Engine |
@@ -36,9 +35,7 @@ replicAnt and all associated tools are released under the MIT License. The ecosy
 
 ## PROJECT ELEVATOR PITCH (max 225 chars)
 
-replicAnt uses Unreal Engine to generate annotated synthetic training data of animals, enabling deep learning for behavioural research — across species, without manual labelling.
-
-(224 characters)
+replicAnt uses Unreal Engine to synthetically generate annotated training data for animal research — enabling biologists to deploy state-of-the-art computer vision with minimal manual labelling and machine learning expertise.
 
 ---
 
@@ -65,11 +62,11 @@ The latest version (March 2026) adds native support for parametric mesh models t
 
 replicAnt is the centrepiece of an interconnected suite of open-source tools we have built for 3D animal data:
 
-**scAnt** (239 GitHub stars, 45 forks) — An open-source, low-cost 3D scanning platform for creating high-fidelity digital models of arthropods and other small animals. scAnt provides the 3D models that feed into replicAnt. Published in *PeerJ* (2021).
+**scAnt** ((https://github.com/evo-biomech/scAnt)) — An open-source, low-cost 3D scanning platform for creating high-fidelity digital models of arthropods and other small animals. scAnt provides the 3D models that feed into replicAnt. Published in *PeerJ* (2021).
 
-**OmniTrax** (39 stars) — A Blender Add-on for deep learning-driven multi-animal tracking and pose estimation. Detection and pose models trained on replicAnt synthetic data are deployed in OmniTrax for real-world experiments. Published in *JOSS* (2024).
+**OmniTrax** (https://github.com/FabianPlum/OmniTrax) — A Blender Add-on for deep learning-driven multi-animal tracking and pose estimation. Detection and pose models trained on replicAnt synthetic data are deployed in OmniTrax for real-world experiments. Published in *JOSS* (2024).
 
-**SMILify** — A framework extending parametric body modelling (analogous to SMPL for humans) to arbitrary animal body plans. SMILify learns species-specific shape spaces from 3D scan collections (via scAnt), replicAnt generates the synthetic training data for SMILify's neural inference networks, and SMILify reconstructs dense 3D pose and shape from video. Currently demonstrated in ants (80 species), stick insects (3 species), and mice.
+**SMILify** (https://github.com/FabianPlum/SMILify) — A framework extending parametric body modelling (analogous to SMPL for humans) to arbitrary animal body plans. SMILify learns species-specific shape spaces from 3D scan collections (via scAnt), replicAnt generates the synthetic training data for SMILify's neural inference networks, and SMILify reconstructs dense 3D pose and shape from video. Currently demonstrated in ants (80 species), stick insects (8 species), and mice.
 
 Together, these tools form a complete pipeline: **physical specimen → 3D scan → parametric model → synthetic training data → trained neural network → 3D behavioural analysis**.
 
@@ -91,6 +88,16 @@ The scientific impact of this work has been recognised through competitive grant
 
 These awards — totalling over €550,000 in research funding — validate the scientific significance and practical impact of the ecosystem. Critically, the BBSRC AI for Bioscience grant explicitly funds work that relies on replicAnt as its synthetic data backbone, demonstrating that the Unreal Engine-based pipeline is already recognised as essential infrastructure by major research funders.
 
+### Community and Adoption
+
+replicAnt and its ecosystem are actively used by research groups across three continents. Key collaborating laboratories include:
+
+- **Imperial College London** (Evolutionary Biomechanics Group) — ongoing use in locomotion studies across species, with additional laboratories applying replicAnt to wolf spider behavioural research
+- **Salk Institute for Biological Studies** (Laboratory of Talmo Pereira, USA) — a key collaborator on two fronts: (1) MIMIC-MJX, a framework for training neural controllers that reproduce animal movement in physics simulation, where insect body models are pretrained on replicAnt synthetic data; and (2) the SMILify parametric mesh pipeline, where replicAnt generates 3D training data to learn realistic pose and shape priors from simulation, improving downstream pose prediction accuracy
+- **Spotta Ltd.** (UK) — an industry partner specialising in automated insect monitoring, using synthetic data for pest detection models
+
+The upstream scanning platform, scAnt, has seen broad global uptake, with an estimated 100 machines built worldwide by universities, research institutions, museums, and artists. This demand — spanning both machine learning applications based on digital twins and broader digitisation needs — led directly to the incorporation of scAnt UG (haftungsbeschränkt) to supply scanners commercially. The growing user base demonstrates sustained demand for the full pipeline, from 3D scanning through synthetic data generation to deployed computer vision models.
+
 ### Why Unreal Engine
 
 Unreal Engine is not a convenience choice — it is the enabling technology. replicAnt depends on UE for:
@@ -102,11 +109,11 @@ Unreal Engine is not a convenience choice — it is the enabling technology. rep
 - **Performance** — GPU-accelerated rendering enables generation of tens of thousands of annotated images in hours rather than weeks
 - **Cross-platform potential** — Linux support enables deployment on HPC clusters for large-scale dataset generation
 
-No other engine or rendering framework offers this combination of photorealism, procedural flexibility, native C++ extensibility, and multi-pass output in a single, well-supported package.
+No other engine or rendering framework offers this combination of photorealism, procedural flexibility, native C++ extensibility, and multi-pass output in a single, well-supported package. In turn, replicAnt introduces Unreal Engine to a community of biologists and computer vision researchers who would otherwise never encounter it — every laboratory that adopts the pipeline becomes a new UE user, expanding the engine's reach into the life sciences.
 
 ### Discriminative ML, Not Generative AI
 
-It is important to emphasise that replicAnt is a tool for *discriminative* machine learning — training networks to detect, track, and reconstruct animals from images — not generative AI. The goal is robust, reproducible, quantitative outcomes for scientific research: accurate pose estimates, reliable tracking, faithful 3D reconstructions. Synthetic data from replicAnt is not an end in itself; it enables the training of models that produce measurable, verifiable results in real experiments. This distinction matters: scientific applications demand reproducibility and quantitative accuracy, not plausible-looking outputs.
+It is important to emphasise that replicAnt is a tool for *discriminative* machine learning — training networks to detect, track, and reconstruct animals from images — not generative AI. The goal is robust, reproducible, quantitative outcomes for scientific research: accurate pose estimates, reliable tracking, faithful 3D reconstructions. Synthetic data from replicAnt is not an end in itself; it enables the training of models that produce measurable, verifiable results in real experiments. This distinction matters: scientific applications demand reproducibility and quantitative accuracy, not simply plausible-looking outputs.
 
 ---
 
@@ -132,34 +139,25 @@ It is important to emphasise that replicAnt is a tool for *discriminative* machi
 |-------|-------|
 | Funding range | $25,000–$50,000 |
 | Additional funding secured? | Yes |
-| Additional funding details | The broader ecosystem is supported by over €550,000 in competitively awarded research funding: a BBSRC AI for Bioscience grant (€330,000) funding synthetic data-driven animal pose estimation via SMILify and OmniTrax; an ERC Proof-of-Concept grant (€150,000) for the scAnt 3D scanning platform; and UKRI Impact Acceleration Funding (£70,000) for scAnt commercialisation. This MegaGrant would be the first dedicated funding for replicAnt-specific Unreal Engine development. |
+| Additional funding details | The broader ecosystem is supported by over €550,000 in competitively awarded research funding: a BBSRC AI for Bioscience grant (€330,000) funding synthetic data-driven animal 3D pose and shape estimation via SMILify; an ERC Proof-of-Concept grant (€150,000) for the scAnt 3D scanning platform; and UKRI Impact Acceleration Funding (£70,000) for scAnt commercialisation. This MegaGrant would be the first dedicated funding for replicAnt-specific Unreal Engine development. |
 
 ### Budget Breakdown
 
-The primary use of funds is to support **one year of dedicated development time** by a core contributor (René Bulla) who has built significant functionality of the project on a volunteer basis and who we aim to support through at least one year of full-time development. Specifically:
+Community feedback has consistently shown that while replicAnt's trained models — particularly those deployed via OmniTrax — deliver immediate value, non-technical researchers often find it difficult to adapt the pipeline to new species and body plans. Users report that integrating new 3D models, configuring body plan rigs, and setting up custom environments, beyond our provided procedural generation, require Unreal Engine expertise that most biologists lack. This is the primary barrier to broader adoption.
 
-- **Developer salary / contract** (~80% of funds) — Full-time Unreal Engine development work:
-  - Refactor the current prototype to reduce technical debt accumulated over multiple engine versions and feature additions
-  - Rebuild the application architecture into a clean, well-documented, and extensible codebase
-  - Streamline the SubjectBase system to make adding new body plans straightforward for non-expert users
-  - Create editable procedural world generation templates for common research scenarios (laboratory environments, field settings)
-  - Improve documentation and onboarding for new users
+To address this, the core use of funds is to support **one year of full-time development** by René Bulla, our lead Unreal Engine developer and technical artist. René has made far-reaching contributions to the replicAnt pipeline since its inception — entirely on a volunteer basis — and it is pivotal that we support him adequately for the next phase of development. Specifically:
 
-- **Infrastructure and testing** (~10% of funds) — Cloud GPU resources for large-scale dataset generation and validation, CI/CD setup
+- **Developer salary / contract** (~80% of funds) — Full-time Unreal Engine development to:
+  - Completely overhaul the model setup pipeline, making it straightforward for researchers to integrate new animal body plans without deep UE expertise
+  - Rebuild the procedural world generation system to support both more complex procedurally generated environments and modular, user-defined scene composition — enabling researchers to recreate their laboratory recording setups with ease
+  - Improve integration of parametric body models for specialised 3D posed mesh recovery applications; the foundation is in place but the system requires improved flexibility and the addition of biologically plausible, literature-informed constraints to further enhance its suitability for cutting-edge research in biomechanics
+  - Refactor the codebase to reduce technical debt accumulated across multiple engine versions (5.0 → 5.4) and organic feature growth
 
-- **Community and dissemination** (~10% of funds) — Tutorial creation, workshop materials, conference presentations to grow the user community
+- **Documentation and onboarding** (~10% of funds) — Comprehensive tutorials, template projects, and step-by-step guides to lower the barrier for new users
 
-### What This Funding Enables
+- **Infrastructure and overhead** (~10% of funds) — Cloud GPU resources for validation, CI/CD setup, and administrative costs
 
-We are directly collaborating with three laboratories across Germany, the United Kingdom, and the United States on the continued development of replicAnt. These groups work on crop protection, locomotion biomechanics, and behavioural ecology — each requiring bespoke synthetic data for species and scenarios where real training data is scarce or nonexistent.
-
-The current codebase, while functional and validated in publication, carries significant technical debt from its long development timeline, engine migration (5.0 → 5.4), and organic feature growth. Grant funding would allow us to:
-
-1. **Professionalise the codebase** — Transform the research prototype into a robust, maintainable tool that external contributors can extend
-2. **Lower the barrier to entry** — Provide templates, documentation, and streamlined workflows so researchers without UE expertise can generate synthetic data for their species
-3. **Expand body plan support** — The SubjectBase system currently directly supports insects (6-legged), quadrupeds (4-legged), and arachnids (8-legged); we aim to generalise this further
-4. **Enable industry applications** — Partners working on crop protection and pest monitoring need production-quality synthetic data generation; cleaning up the pipeline enables these concrete applications
-5. **Sustain open-source development** — The core developer has contributed thousands of hours as a volunteer; this grant would provide the first dedicated funding for replicAnt-specific UE development
+These efforts aim to further decrease the entry barrier for both bespoke and generalist solutions in animal behavioural monitoring and research across species.
 
 ---
 
@@ -171,9 +169,8 @@ The current codebase, while functional and validated in publication, carries sig
   - [ ] Add list of scAnt users (company/institution logos)
   - [ ] Add open tech page
   - [ ] Add full spec page of scAnt Pro with "request quote"
-- [ ] Update replicAnt GitHub page (basic clean-up)
-- [ ] Prepare project media link (demo video / trailer)
-- [ ] Finalise company/institution name
-- [ ] Confirm exact funding amount requested
-- [ ] Review and polish elevator pitch (currently 224 chars, max 225)
-- [ ] Add project build link (optional)
+- [x] Update replicAnt GitHub page (basic clean-up after 5.4 migration and SMILify integration)
+- [x] Prepare project media link (demo video / trailer)
+- [x] Finalise company/institution name
+- [x] Confirm exact funding amount requested
+- [x] Review and polish elevator pitch (currently 224 chars, max 225)
