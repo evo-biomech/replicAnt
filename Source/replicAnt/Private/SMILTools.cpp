@@ -1,6 +1,7 @@
 #include "SMILTools.h"
 #include "HAL/PlatformFilemanager.h"
 #include "Misc/FileHelper.h"
+#include "Misc/Paths.h"
 #include "Engine/Engine.h"
 #include "Logging/LogMacros.h"
 
@@ -24,10 +25,18 @@ bool USMILTools::LoadPCADataFromCSV(const FString& FilePath, bool bShowDebugMess
         return false;
     }
 
-    // Check if file exists
-    if (!FPlatformFileManager::Get().GetPlatformFile().FileExists(*FilePath))
+    // Resolve relative paths against the project's Content directory so callers can
+    // pass e.g. "Subjects/SMILyANT/smil_morph_PC_data.csv" and stay portable across machines.
+    FString ResolvedPath = FilePath;
+    if (FPaths::IsRelative(ResolvedPath))
     {
-        FString ErrorMsg = FString::Printf(TEXT("LoadPCADataFromCSV: File does not exist: %s"), *FilePath);
+        ResolvedPath = FPaths::ConvertRelativePathToFull(FPaths::ProjectContentDir(), ResolvedPath);
+    }
+
+    // Check if file exists
+    if (!FPlatformFileManager::Get().GetPlatformFile().FileExists(*ResolvedPath))
+    {
+        FString ErrorMsg = FString::Printf(TEXT("LoadPCADataFromCSV: File does not exist: %s"), *ResolvedPath);
         UE_LOG(LogSMILTools, Error, TEXT("%s"), *ErrorMsg);
         if (bShowDebugMessages && GEngine)
         {
@@ -38,9 +47,9 @@ bool USMILTools::LoadPCADataFromCSV(const FString& FilePath, bool bShowDebugMess
 
     // Load file content
     TArray<FString> FileLines;
-    if (!FFileHelper::LoadFileToStringArray(FileLines, *FilePath))
+    if (!FFileHelper::LoadFileToStringArray(FileLines, *ResolvedPath))
     {
-        FString ErrorMsg = FString::Printf(TEXT("LoadPCADataFromCSV: Failed to load file: %s"), *FilePath);
+        FString ErrorMsg = FString::Printf(TEXT("LoadPCADataFromCSV: Failed to load file: %s"), *ResolvedPath);
         UE_LOG(LogSMILTools, Error, TEXT("%s"), *ErrorMsg);
         if (bShowDebugMessages && GEngine)
         {
@@ -60,7 +69,7 @@ bool USMILTools::LoadPCADataFromCSV(const FString& FilePath, bool bShowDebugMess
         return false;
     }
 
-    UE_LOG(LogSMILTools, Log, TEXT("LoadPCADataFromCSV: Starting to parse file: %s"), *FilePath);
+    UE_LOG(LogSMILTools, Log, TEXT("LoadPCADataFromCSV: Starting to parse file: %s"), *ResolvedPath);
     UE_LOG(LogSMILTools, Log, TEXT("LoadPCADataFromCSV: File contains %d lines"), FileLines.Num());
 
     // Parse header
