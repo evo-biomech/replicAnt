@@ -99,7 +99,9 @@ class REPLICANT_API USMILTools : public UBlueprintFunctionLibrary
 public:
     /**
      * Load PCA morphing data from a CSV file
-     * @param FilePath - Absolute path to the CSV file containing PCA data
+     * @param FilePath - Path to the CSV file containing PCA data. Absolute paths are used as-is;
+     *                   relative paths are resolved against the project's Content directory
+     *                   (e.g. "Subjects/SMILyANT/smil_morph_PC_data.csv").
      * @param bShowDebugMessages - Whether to display debug messages on screen
      * @param OutPCAData - Output structure containing the loaded PCA data
      * @param OutNumComponents - Number of principal components loaded
